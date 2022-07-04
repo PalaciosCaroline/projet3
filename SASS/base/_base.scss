@@ -1,5 +1,6 @@
 body{
     font-family:'Roboto';
+    
 }
 
 a{
@@ -21,3 +22,7 @@ a{
     display: flex;
 }
 
+.center{
+    justify-content: center;
+    align-items: center;
+}
