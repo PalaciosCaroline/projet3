@@ -1,1 +1,207 @@
+body{
+    color:#000000
+}
+
+h1{
+padding-top: 50px;
+}
+h2{
+padding-top:40px;
+padding-bottom: 30px;
+}
+
+.flex {
+    display: flex;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form_location {
+    @include marge-page ;
+    background-color: #eae9e9;
+    box-shadow: inset 1px 4px 9px -8px;    flex-basis: 100%;
+    text-align: center;
+    padding: 20px 0;    
+    i {
+        color: darken(rgb(218, 217, 217), 60%);
+    }
+    &_input{
+        background-color: rgb(218, 217, 217);
+        border: 1px solid transparent;
+        padding-left: 0.5rem;
+        width: 125px;
+        border: none;
+        background: none;
+          &::placeholder{
+            color: darken(rgb(218, 217, 217), 60%);
+            font-weight: 700;
+          }
+
+    }
+
+}
+
+.main_header{
+    @include marge-page ;
+
+    background: lighten($color-background-header,12%);
+    padding-bottom: 40px; 
+    text-align: center;
+    .explore {
+        @include button;
+    }
+}
+
+
+.functioning{
+    @include marge-page ;
+    position: relative;
+    margin-top: 30px;
+    padding-bottom: 40px;
+    & a {
+        color:#000;
+    }
+    & .card{
+        // padding: 30px 0 25px 0;
+        height: 70px;
+        margin-left: 7px;
+        margin-bottom: 25px;    
+        border-radius: 15px; 
+        box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.2);
+        background: lighten($color-background-header,12%);
+        align-items: center;
+        
+        &:hover{
+            @include cardHover;           
+            background-color: mix(#fff,$color-primary, 85%);
+            i{
+                color: $color-primary;
+            }
+        }
+        & .tag-number{
+            
+                height: 25px;
+                width: 25px;
+                background-color: $color-primary;
+                border-radius: 50%;
+                
+                margin-left: -14px;
+                color: #fff;            
+                
+            }
+        
+        i{
+            margin-right: 1.2rem;
+            margin-left: 1.2rem;
+            color:darken(rgb(218, 217, 217), 40%);;
+        }
+    }   
+ 
+}      
+       
+     
+
+section{
+    @include marge-page;
+    
+}
+
+.section_restaurant{
+    background-color: lighten($color-background-header,12%);
+    padding-bottom: 40px;
+}
+
+
+.restaurant{
+        flex-direction: column;
+        @include devices(pc) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: auto;
+        }
+        @include devices(maxi-pc) {
+            height: 900px;
+
+        }
+        & a article{
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        }
+        &_card {
+        display: block;
+      
+        width: 100%;
+        max-width: 550px;
+        height: 250px;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 15px;    
+        position: relative;
+        text-decoration: none;
+        box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.5);
+        color: #000000;
+        transition: all 0.2s ease-in-out;   
+        &:hover{
+        @include cardHover;
+        }
+    
+        @include devices(pc) {
+            min-width: 400px;
+           max-width: 48%;
+        }
+        @include devices(maxi-pc) {
+            min-width: 400px;
+           max-width: 48%;
+           height: 45%;
+        }
+       
+        
+        
+        
+        
+        &_label_new::after{
+        @include tag-new;
+        }
+
+        &_box_img {
+            width: 100%;
+            overflow: hidden;
+          
+            border-radius: 15px 15px 0 0;
+            position: relative;
+            
+            img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;   
+            }
+
+        }    
+
+        &_box_text {
+            padding-left: 1rem;
+           font-size: 0.8rem; 
+           justify-content: space-between;
+           align-items: center;
+           min-height: 70px;
+           & header{
+            flex-direction: column;
+            align-content: center;
+            }
+            
+        }
+    
+
+
+}
+
+    
+}
+
 
