@@ -55,31 +55,34 @@ a {
   font-size: 1.4rem;
 }
 
-footer {
+.body_footer {
   padding-right: 5.5%;
   padding-left: 5.5%;
   padding-top: 30px;
   background-color: #333;
   height: 200px;
 }
-footer h3 {
+.body_footer h3 {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-footer li {
+.body_footer li {
   line-height: 25px;
 }
-footer h3, footer a, footer i {
+.body_footer li:nth-child(1), .body_footer li:nth-child(2) {
+  font-weight: 500;
+}
+.body_footer h3, .body_footer a, .body_footer i {
   color: #FfffFF;
 }
-footer h3, footer a:not(i) {
+.body_footer span:not(i) {
   font-size: 1.1rem;
 }
-footer_text {
-  font-weight: bold;
+.body_footer .text {
+  font-weight: 300;
 }
-footer i {
+.body_footer i {
   font-size: 0.8rem;
   margin-right: 1rem;
 }
@@ -883,7 +886,7 @@ h2 {
   text-align: center;
 }
 .main_header .explore {
-  background: linear-gradient(to top, #9356dc, #ff79da);
+  background: linear-gradient(to top, #9356dc 10%, #ff79da 80%);
   color: #FFF;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   border: none;
@@ -898,12 +901,18 @@ h2 {
   padding: 16px 50px;
 }
 .main_header .explore.explore {
-  padding: 16px 35px;
+  padding: 16px 25px;
+}
+@media only screen and (min-width: 950px) {
+  .main_header .explore.explore {
+    padding: 16px 35px;
+  }
 }
 .main_header .explore:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
   transform: translateY(-1px);
-  background-color: linear-gradient(to top, #c9abee, #ffdff6);
+  opacity: 0.95;
+  background-color: linear-gradient(to top, #e4d5f6, white);
 }
 
 .features {
@@ -914,15 +923,29 @@ h2 {
 }
 .features a {
   color: #000;
+  height: 100%;
 }
 .features .card {
   height: 65px;
+  width: 100%;
   margin-left: 7px;
   margin-bottom: 25px;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.3);
   background: #f8f8f8;
   align-items: center;
+}
+@media only screen and (min-width: 950px) {
+  .features .card {
+    height: 70px;
+    width: 40vw;
+    margin: 25px auto;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .features .card p {
+    margin-left: 20px;
+  }
 }
 .features .card:hover {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
@@ -965,11 +988,7 @@ h2 {
     align-content: space-between;
     height: 50vw;
     width: 100%;
-  }
-}
-@media only screen and (min-width: 2000px) {
-  .restaurant {
-    height: 900px;
+    margin-bottom: 30px;
   }
 }
 .restaurant article {
@@ -1018,8 +1037,10 @@ h2 {
 }
 .restaurant_card_box_img {
   width: 100%;
+  height: calc(100% - 70px);
   overflow: hidden;
   position: relative;
+  border-radius: 20px 20px 0 0;
 }
 .restaurant_card_box_img img {
   width: 100%;
@@ -1028,11 +1049,17 @@ h2 {
 }
 .restaurant_card_box_text {
   background-color: #fff;
-  padding-left: 1rem;
+  padding-left: 1.1rem;
   font-size: 0.8rem;
   justify-content: space-between;
   align-items: center;
-  min-height: 70px;
+  border-radius: 0 0 20px 20px;
+  height: 70px;
+}
+@media only screen and (min-width: 950px) {
+  .restaurant_card_box_text {
+    padding-left: 1.8rem;
+  }
 }
 .restaurant_card_box_text header {
   flex-direction: column;
@@ -1041,46 +1068,50 @@ h2 {
 .restaurant_card_box_text header h3 {
   padding-bottom: 5px;
 }
-
-.btn--coeur {
+.restaurant .btn--coeur {
   border: none;
   background-color: white;
-  margin-right: 30px;
+  margin-right: 15px;
   height: 40px;
-  width: 50px;
+  width: 55px;
 }
-.btn--coeur .vide {
+@media only screen and (min-width: 950px) {
+  .restaurant .btn--coeur {
+    margin-right: 30px;
+  }
+}
+.restaurant .btn--coeur .vide {
   font-size: 2rem;
   background-color: #fff;
   position: absolute;
+  color: #414040;
   z-index: 1;
-  right: 8px;
+  right: 3px;
   bottom: 20px;
 }
 @media only screen and (min-width: 950px) {
-  .btn--coeur .vide {
+  .restaurant .btn--coeur .vide {
     right: 15px;
     bottom: 20px;
   }
 }
-.btn--coeur .rempli {
+.restaurant .btn--coeur .rempli {
   display: block;
   font-size: 2rem;
   position: absolute;
   z-index: 99;
-  right: 8px;
+  right: 3px;
   bottom: 20px;
   transform: scale(0);
 }
 @media only screen and (min-width: 950px) {
-  .btn--coeur .rempli {
+  .restaurant .btn--coeur .rempli {
     right: 15px;
     bottom: 20px;
   }
 }
-.btn--coeur:hover .rempli {
-  color: rgb(181, 78, 181);
-  background-color: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+.restaurant .btn--coeur:hover .rempli {
+  background-color: linear-gradient(to top, #9356dc 10%, #ff79da 80%);
   background: -moz-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   background: -webkit-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
@@ -1090,14 +1121,13 @@ h2 {
   -webkit-text-fill-color: transparent;
   animation: remplissageCoeur 0.3s forwards;
 }
-.btn--coeur i {
+.restaurant .btn--coeur i {
   font-size: 25px;
   margin-right: 2rem;
 }
-.btn--coeur i::before {
+.restaurant .btn--coeur i::before {
   display: initial;
 }
-
 @keyframes remplissageCoeur {
   0% {
     transform: scale(0.1);
