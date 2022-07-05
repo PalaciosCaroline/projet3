@@ -2,36 +2,36 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 
-footer {
+.body_footer {
     @include marge-page;
     padding-top: 30px;
-    
     background-color: #333;
     // background-color: #353434;
-    
     height: 200px;
 
     h3 {
         font-weight: 500;
-        font-size:30px;
+        font-size:1.2rem;
         margin-bottom: 1rem;
     }
 
     li{
     line-height: 25px;
-    
+        &:nth-child(1),
+        &:nth-child(2){
+            font-weight: 500;
+        }
+
     }
 
     h3,a , i{
        color: #FfffFF; 
     }
-    h3,a:not(i){
-       
+    span:not(i){
        font-size: 1.1rem;
-       
     }
-    &_text{
-        font-weight: bold;
+    & .text{
+        font-weight: 300;
     }    
 
             i {
