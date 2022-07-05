@@ -27,8 +27,11 @@ h1{
 padding-top: 50px;
 }
 h2{
-padding-top:20px;
+padding-top:40px;
 padding-bottom: 20px;
+    @include devices (pc){
+        padding-bottom:30px;
+    }
 }
 
 .flex {
@@ -43,16 +46,18 @@ padding-bottom: 20px;
 
 .form_location {
     @include marge-page ;
-    background-color: #eae9e9;
-    box-shadow: inset 1px 4px 9px -8px;    flex-basis: 100%;
+    // background-color: #eae9e9;
+    background-color: $color-background-header--ligth;
+
+    box-shadow: inset 1px 4px 9px -8px;   
     text-align: center;
     padding: 20px 0;
     
     i {
-        color: darken(rgb(218, 217, 217), 60%);
+        color: $color-background-header--dark;
     }
     &_input{
-        background-color: rgb(218, 217, 217);
+        background-color: $color-background-header;
         border: 1px solid transparent;
         padding-left: 0.5rem;
         width: 125px;
@@ -60,7 +65,7 @@ padding-bottom: 20px;
         background: none;
 
           &::placeholder{
-            color: darken(rgb(218, 217, 217), 60%);
+            color: $color-background-header--dark;
             font-weight: 700;
           }
 
@@ -71,7 +76,7 @@ padding-bottom: 20px;
 .main_header{
     @include marge-page ;
 
-    background: lighten($color-background-header,12%);
+    background: $color-background-header--ultraligth;
     padding-bottom: 40px; 
     text-align: center;
     .explore {
@@ -82,65 +87,49 @@ padding-bottom: 20px;
 
 .features{
     @include marge-page ;
-    position: relative;
-    margin-top: 30px;
-    padding-bottom: 40px;
+    position: relative;    
+    padding-bottom: 30px;
     & a {
         color:#000;
     }
     & .card{
-        padding: 30px 0 25px 0;
+        height: 65px;
         margin-left: 7px;
         margin-bottom: 25px;    
-        border-radius: 15px; 
-        box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.2);
-        background: lighten($color-background-header,12%);
+        border-radius: 15px 15px 15px 15px; 
+        box-shadow: $box-shadow-card;
+        background: $color-background-header--ultraligth;
         align-items: center;
         
         &:hover{
             @include cardHover;
-            background-color: mix(#fff,$color-primary, 85%);
+            background-color: mix(#fff,$color-primary, 87%);
             i{
                 color: $color-primary
             }
         }
-        & .tag-number{
-            
+        & .tag-number{            
                 height: 25px;
                 width: 25px;
                 background-color: $color-primary;
-                border-radius: 50%;
-                
+                border-radius: 50%;                
                 margin-left: -14px;
-                color: #ffffffff;
-                
-                
+                color: #fff;              
             }
-        }
+       
         i{
             margin-right: 1.2rem;
             margin-left: 1.2rem;
-            color:darken(rgb(218, 217, 217), 40%);;
+            color:darken(rgb(218, 217, 217), 40%);
         }
-
-
-
-    }   
+    }    
+}   
  
-      
-       
-     
-
-section{
-    @include marge-page;
-    
-}
-
 .section_restaurant{
     background-color: lighten($color-background-header,12%);
     padding-bottom: 40px;
+    @include marge-page;
 }
-
 
 .restaurant{
         flex-direction: column;
@@ -148,42 +137,41 @@ section{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        height: 600px;
+        align-content: space-between;
+        height: 50vw;
+        width: 100%;
         }
         @include devices(maxi-pc) {
             height: 900px;
 
         }
-        & a article{
+        & article{
         height: 100%;
         width: 100%;
         flex-direction: column;
+       
         }
         &_card {
-        display: block;
-      
+        display: block;      
         width: 100%;
-        max-width: 550px;
-        height: 250px;
-        margin: auto;
+        height: 240px;
         margin-bottom: 20px;
-        border-radius: 15px;    
+        border-radius: 25px;
         position: relative;
-        text-decoration: none;
-        box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.5);
-        color: #000000;
+        box-shadow: $box-shadow-card;
         transition: all 0.2s ease-in-out;   
         &:hover{
         @include cardHover;
         }
     
         @include devices(pc) {
-            min-width: 400px;
-           max-width: 48%;
+            margin-bottom: 0;
+           width: 47%;
+           height: 45%;
         }
         @include devices(maxi-pc) {
-            min-width: 400px;
-           max-width: 48%;
+          
+           max-width: 45%;
            height: 45%;
         }
        
@@ -197,17 +185,13 @@ section{
 
         &_box_img {
             width: 100%;
-            overflow: hidden;
-          
-            border-radius: 15px 15px 0 0;
-            position: relative;
-            
+            overflow: hidden;         
+            position: relative;            
             img {
             width: 100%;
             height: 100%;
             object-fit: cover;   
             }
-
         }    
 
         &_box_text {
@@ -220,6 +204,9 @@ section{
            & header{
             flex-direction: column;
             align-content: center;
+                h3{
+                    padding-bottom: 5px;
+                }
             }  
         }
     } 
@@ -236,17 +223,25 @@ section{
         background-color: #fff;
         position: absolute;
         z-index:1;
-        right: 15px;
-        bottom:20px;                    
+        right: 8px;
+        bottom:20px;   
+        @include devices (pc){
+            right: 15px;
+            bottom:20px; 
+        }                 
     }
     .rempli{
-       display: block;
+        display: block;
         font-size: 2rem;
         position: absolute;
         z-index:99;
-        right: 15px;
+        right: 8px;
         bottom:20px;       
-        transform: scale(0);                   
+        transform: scale(0); 
+        @include devices (pc){
+            right: 15px;
+            bottom:20px; 
+        }                        
     }
     &:hover {
          
