@@ -824,6 +824,14 @@ span:nth-child(7) {
   animation-iteration-count: infinite;
 }
 
+.main-stop {
+  stop-color: #9356dc;
+}
+
+.alt-stop {
+  stop-color: #ff79da;
+}
+
 /*#9356DC #FF79DA #99E2D0*/
 /*Logo et titres: Shrikhand
 Texte: Roboto*/
@@ -1086,13 +1094,13 @@ h2 {
   position: absolute;
   color: #414040;
   z-index: 1;
-  right: 3px;
-  bottom: 20px;
+  right: 5px;
+  bottom: 14px;
 }
 @media only screen and (min-width: 950px) {
   .restaurant .btn--coeur .vide {
-    right: 15px;
-    bottom: 20px;
+    right: 31px;
+    bottom: 6px;
   }
 }
 .restaurant .btn--coeur .rempli {
@@ -1100,26 +1108,27 @@ h2 {
   font-size: 2rem;
   position: absolute;
   z-index: 99;
-  right: 3px;
-  bottom: 20px;
+  right: 20px;
+  bottom: 29px;
   transform: scale(0);
 }
 @media only screen and (min-width: 950px) {
   .restaurant .btn--coeur .rempli {
-    right: 15px;
-    bottom: 20px;
+    right: 46px;
+    bottom: 22px;
   }
 }
 .restaurant .btn--coeur:hover .rempli {
-  background-color: linear-gradient(to top, #9356dc 10%, #ff79da 80%);
-  background: -moz-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  background: -webkit-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: remplissageCoeur 0.3s forwards;
+  animation: remplissageCoeur 0.2s forwards;
+}
+.restaurant .btn--coeur:hover .vide {
+  animation: disparitionCoeur 0.1s 0.2s forwards;
+}
+.restaurant .btn--coeur:hover .main-stop {
+  stop-color: #9356dc;
+}
+.restaurant .btn--coeur:hover .alt-stop {
+  stop-color: #ff79da;
 }
 .restaurant .btn--coeur i {
   font-size: 25px;
@@ -1143,5 +1152,13 @@ h2 {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes disparitionCoeur {
+  0% {
+    transform: opacity(0.9);
+  }
+  100% {
+    transform: opacity(0);
   }
 }/*# sourceMappingURL=style.css.map */
