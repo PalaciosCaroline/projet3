@@ -1,6 +1,8 @@
+@import
+ './font';
+
 body{
     font-family:'Roboto';
-    
 }
 
 a{
@@ -11,6 +13,7 @@ a{
 font-family: 'Shrikhand';
 }
 
+
 ol,ul {
     list-style: none;
 }
@@ -20,9 +23,4 @@ a{
 
 .flex {
     display: flex;
-}
-
-.center{
-    justify-content: center;
-    align-items: center;
 }

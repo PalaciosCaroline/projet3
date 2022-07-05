@@ -1,39 +1,76 @@
+
+
+
+
+
+/*#9356DC #FF79DA #99E2D0*/
+/*Logo et titres: Shrikhand
+Texte: Roboto*/
+
+
+
+
+
+$font-family-title: 'shrikhandregular';
+$font-family-text: 'robotoregular';
+
+
+
+
+
+
 body{
-    color:#000000;        
+    color:#000000
 }
 
 h1{
 padding-top: 50px;
 }
-
 h2{
-padding-top:40px;
-padding-bottom: 10px;
+padding-top:20px;
+padding-bottom: 20px;
 }
 
-.form_location {   
+.flex {
+    display: flex;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form_location {
+    @include marge-page ;
     background-color: #eae9e9;
-    box-shadow: inset 1px 4px 9px -8px;    
+    box-shadow: inset 1px 4px 9px -8px;    flex-basis: 100%;
     text-align: center;
-    padding: 20px 0;    
+    padding: 20px 0;
+    
     i {
-        color: darken($color-background-header, 60%);
+        color: darken(rgb(218, 217, 217), 60%);
     }
     &_input{
-        background-color: $color-background-header;
+        background-color: rgb(218, 217, 217);
         border: 1px solid transparent;
         padding-left: 0.5rem;
         width: 125px;
         border: none;
         background: none;
+
           &::placeholder{
-            color: darken($color-background-header, 60%);
+            color: darken(rgb(218, 217, 217), 60%);
             font-weight: 700;
           }
+
     }
+
 }
 
 .main_header{
+    @include marge-page ;
+
     background: lighten($color-background-header,12%);
     padding-bottom: 40px; 
     text-align: center;
@@ -45,65 +82,77 @@ padding-bottom: 10px;
 
 .features{
     @include marge-page ;
+    position: relative;
     margin-top: 30px;
     padding-bottom: 40px;
     & a {
         color:#000;
     }
-    &_card{
-        height: 70px;
+    & .card{
+        padding: 30px 0 25px 0;
         margin-left: 7px;
         margin-bottom: 25px;    
         border-radius: 15px; 
         box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.2);
         background: lighten($color-background-header,12%);
-        align-items: center;        
+        align-items: center;
+        
         &:hover{
-            @include cardHover;           
+            @include cardHover;
             background-color: mix(#fff,$color-primary, 85%);
             i{
-                color: $color-primary;
+                color: $color-primary
             }
         }
-        //essayer de le faire en ::before
-        & .tag-number{            
-            height: 25px;
-            width: 25px;
-            background-color: $color-primary;
-            border-radius: 50%;                
-            margin-left: -14px;
-            color: #fff;        
-        }        
-        i {
+        & .tag-number{
+            
+                height: 25px;
+                width: 25px;
+                background-color: $color-primary;
+                border-radius: 50%;
+                
+                margin-left: -14px;
+                color: #ffffffff;
+                
+                
+            }
+        }
+        i{
             margin-right: 1.2rem;
             margin-left: 1.2rem;
-            color:darken($color-background-header, 40%);;
+            color:darken(rgb(218, 217, 217), 40%);;
         }
-    }    
-}      
+
+
+
+    }   
+ 
+      
        
      
 
 section{
-    @include marge-page;    
-    &_restaurant{
-        background-color: lighten($color-background-header,12%);
-        padding-bottom: 40px;
-    }
+    @include marge-page;
+    
 }
+
+.section_restaurant{
+    background-color: lighten($color-background-header,12%);
+    padding-bottom: 40px;
+}
+
 
 .restaurant{
         flex-direction: column;
-
         @include devices(pc) {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 100%;
-        height: auto;
+        height: 600px;
         }
         @include devices(maxi-pc) {
             height: 900px;
+
         }
         & a article{
         height: 100%;
@@ -111,39 +160,48 @@ section{
         flex-direction: column;
         }
         &_card {
-        display: block;      
+        display: block;
+      
         width: 100%;
-        height: 240px; 
+        max-width: 550px;
+        height: 250px;
+        margin: auto;
         margin-bottom: 20px;
         border-radius: 15px;    
         position: relative;
+        text-decoration: none;
         box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.5);
         color: #000000;
-        transition: all 0.2s ease-in-out;  
-
+        transition: all 0.2s ease-in-out;   
         &:hover{
         @include cardHover;
-        }    
-
+        }
+    
         @include devices(pc) {
-            width: 47%;
-            height: 20vw;
+            min-width: 400px;
+           max-width: 48%;
         }
         @include devices(maxi-pc) {
             min-width: 400px;
            max-width: 48%;
-           height: 48%;
-        }         
-
+           height: 45%;
+        }
+       
+        
+        
+        
+        
         &_label_new::after{
         @include tag-new;
         }
 
         &_box_img {
             width: 100%;
-            overflow: hidden;          
+            overflow: hidden;
+          
             border-radius: 15px 15px 0 0;
-            position: relative;            
+            position: relative;
+            
             img {
             width: 100%;
             height: 100%;
@@ -153,77 +211,75 @@ section{
         }    
 
         &_box_text {
-            padding-left: 1.5rem;
+            background-color: #fff;
+            padding-left: 1rem;
            font-size: 0.8rem; 
            justify-content: space-between;
            align-items: center;
            min-height: 70px;
            & header{
             flex-direction: column;
-            align-content: space-around;
-                h3{
-                margin-bottom: 3px;            
-                }
-                p{
-                margin-top:3px;
-                }
-            }
-            button{
-                border:none;
-                background-color: white;
-                
-                margin-right: 30px;
-                height: 40px;
-                width: 50px;
-                .vide{                    
-                    font-size: 2rem;
-                    background-color: #fff;
-                    position: absolute;
-                    z-index:1;
-                    right: 15px;
-                    bottom:20px;                    
-                }
-                .rempli{
-                   display: block;
-                    font-size: 2rem;
-                    position: absolute;
-                    z-index:99;
-                    right: 15px;
-                    bottom:20px;       
-                    transform: scale(0);                   
-                }
-                &:hover {
-                     
-                    .rempli {
-                        color:rgb(181, 78, 181);
-                        background-color: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-                        background: -moz-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-                        background: -webkit-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-                        background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-                        -webkit-background-clip: text;
-                        -moz-background-clip: text;
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;                                                   
-                        animation: remplissageCoeur 0.3s forwards;
-                    }
-                }
-                i{
-                    font-size: 25px;
-                    margin-right: 2rem;
-                                  
-                    &::before{display:initial}
-                }
-            }
+            align-content: center;
+            }  
+        }
+    } 
+}
+
+.btn--coeur{
+    border:none;
+    background-color: white;    
+    margin-right: 30px;
+    height: 40px;
+    width: 50px;
+    .vide{                    
+        font-size: 2rem;
+        background-color: #fff;
+        position: absolute;
+        z-index:1;
+        right: 15px;
+        bottom:20px;                    
+    }
+    .rempli{
+       display: block;
+        font-size: 2rem;
+        position: absolute;
+        z-index:99;
+        right: 15px;
+        bottom:20px;       
+        transform: scale(0);                   
+    }
+    &:hover {
+         
+        .rempli {
+            color:rgb(181, 78, 181);
+            background-color: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            background: -moz-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            background: -webkit-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;                                                   
+            animation: remplissageCoeur 0.3s forwards;
         }
     }
-}  
+    i{
+        font-size: 25px;
+        margin-right: 2rem;
+                      
+        &::before{display:initial}
+    }
+}
+
+
+  
 
 
 
- @keyframes remplissageCoeur {
-     0%{transform: scale(0.1);}
-     20%{transform: scale(0.3);}
-     50%{transform: scale(0.5);}
-     70%{transform: scale(0.7);}
-     100%{transform: scale(1)}
- }
+@keyframes remplissageCoeur {
+0%{transform: scale(0.1);}
+20%{transform: scale(0.3);}
+50%{transform: scale(0.5);}
+70%{transform: scale(0.7);}
+100%{transform: scale(1)}
+}
