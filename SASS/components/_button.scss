@@ -47,7 +47,7 @@
         
          @include devices (pc){
             right: 31px;
-             bottom:8px; 
+             bottom:6px; 
         }                 
      }
      .rempli{
@@ -61,16 +61,20 @@
          
          @include devices (pc){
             right: 46px;
-             bottom:24px; 
+             bottom:22px; 
          }                        
      }
      &:hover {         
-         .rempli {            
-
-
-            .main-stop {
+        .rempli {            
+            animation: remplissageCoeur 0.2s forwards;
+        }
+        .vide {
+            animation : disparitionCoeur 0.1s 0.2s forwards;
+        }
+        .main-stop {
             stop-color: #9356dc;
         }
+
         .alt-stop {
             stop-color:#ff79da;
         }
@@ -82,9 +86,9 @@
             //  -moz-background-clip: text;
             //  background-clip: text;
             //  -webkit-text-fill-color: transparent;                                                   
-             animation: remplissageCoeur 0.2s ease-in-out forwards;
-         }
-     }
+            
+        }
+     
      i{
          font-size: 25px;
          margin-right: 2rem;             
@@ -94,10 +98,16 @@
 
      @keyframes remplissageCoeur {
      0%{transform: scale(0.1);}
-     30%{transform: scale(0.5);}
-     60%{transform: scale(0.8);}
-     100%{transform: scale(1)}
+     20%{transform: scale(0.3);}
+     50%{transform: scale(0.5);}
+     70%{transform: scale(0.7);}
+     100%{transform: scale(1);}
      }
+
+     @keyframes disparitionCoeur {
+    0%{transform:opacity(0.9);}
+    100%{transform:opacity(0);}
+    }
  }
 
 .main-stop {
