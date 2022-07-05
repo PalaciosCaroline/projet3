@@ -27,66 +27,143 @@
 }
 
 
-@mixin btn--coeur{
-    border:none;
-    background-color: white;    
-    margin-right: 15px;
-    height: 40px;
+ @mixin btn--coeur{
+     border:none;
+     background-color: white;    
+     margin-right: 15px;
+     height: 40px;
     width: 55px;
-    @include devices (pc){
-        margin-right: 30px;
-    }
-    .vide{                    
-        font-size: 2rem;
+     @include devices (pc){
+         margin-right: 30px;
+     }
+     .vide{                    
+         font-size: 2rem;
         background-color: #fff;
-        position: absolute;
+       position: absolute;
         color: $color-background-header--dark;
         z-index:1;
-        right: 3px;
-        bottom:20px;   
-        @include devices (pc){
-            right: 15px;
-            bottom:20px; 
+         right: 5px;
+         bottom:14px;   
+        
+         @include devices (pc){
+            right: 31px;
+             bottom:8px; 
         }                 
-    }
-    .rempli{
-        display: block;
-        font-size: 2rem;
-        position: absolute;
-        z-index:99;
-        right: 3px;
-        bottom:20px;       
-        transform: scale(0); 
-        @include devices (pc){
-            right: 15px;
-            bottom:20px; 
-        }                        
-    }
-    &:hover {         
-        .rempli {            
-            background-color: $bg-btn;
-            background: -moz-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            background: -webkit-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;                                                   
-            animation: remplissageCoeur 0.3s forwards;
+     }
+     .rempli{
+         display: block;
+         font-size: 2rem;
+         position: absolute;
+         z-index:99;
+         right: 20px;
+         bottom:29px;       
+         transform: scale(0);
+         
+         @include devices (pc){
+            right: 46px;
+             bottom:24px; 
+         }                        
+     }
+     &:hover {         
+         .rempli {            
+
+
+            .main-stop {
+            stop-color: #9356dc;
         }
-    }
-    i{
-        font-size: 25px;
-        margin-right: 2rem;             
-        &::before{display:initial}
-    }
+        .alt-stop {
+            stop-color:#ff79da;
+        }
+            //  background-color: $bg-btn;
+            //  background: -moz-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            //  background: -webkit-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            //  background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            //  -webkit-background-clip: text;
+            //  -moz-background-clip: text;
+            //  background-clip: text;
+            //  -webkit-text-fill-color: transparent;                                                   
+             animation: remplissageCoeur 0.2s ease-in-out forwards;
+         }
+     }
+     i{
+         font-size: 25px;
+         margin-right: 2rem;             
+         &::before{display:initial}
+     }
 
 
-    @keyframes remplissageCoeur {
-    0%{transform: scale(0.1);}
-    20%{transform: scale(0.3);}
-    50%{transform: scale(0.5);}
-    70%{transform: scale(0.7);}
-    100%{transform: scale(1)}
-    }
+     @keyframes remplissageCoeur {
+     0%{transform: scale(0.1);}
+     30%{transform: scale(0.5);}
+     60%{transform: scale(0.8);}
+     100%{transform: scale(1)}
+     }
+ }
+
+.main-stop {
+    stop-color: #9356dc;
+  }
+.alt-stop {
+    stop-color:#ff79da;
 }
+
+
+
+
+// @mixin btn--coeur{
+//     border:none;
+//     background-color: white;    
+//     margin-right: 15px;
+//     height: 40px;
+//     width: 55px;
+//     @include devices (pc){
+//         margin-right: 30px;
+//     }
+//     .vide {                      
+//         position: absolute;
+//         fill: $color-background-header--dark;
+//         z-index:1;
+//         right: 3px;
+//         bottom:20px;  
+//         width: 35px;
+//         height: 35px;
+//         @include devices (pc){
+//             right: 12px;
+//             bottom:12px; 
+//         }                 
+//     }
+//     .rempli{
+//         display: block;
+
+//         position: absolute;
+//         z-index:99;
+//         right: 3px;
+//         bottom:20px;       
+//         transform: scale(0); 
+//         @include devices (pc){
+//             right: 15px;
+//             bottom:20px; 
+//         }                        
+//     }
+//     &:hover {         
+//         .rempli {                                     
+//             animation: remplissageCoeur 0.3s forwards;
+//         }
+//     }
+//     svg, i{
+//       width: 35px;
+//       height: 35px;
+                 
+//         &::before{display:initial}
+//     }
+
+
+//     @keyframes remplissageCoeur {
+//     0%{transform: scale(0.1);}
+//     20%{transform: scale(0.3);}
+//     50%{transform: scale(0.5);}
+//     70%{transform: scale(0.7);}
+//     100%{transform: scale(1)}
+//     }
+// }
+
