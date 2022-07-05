@@ -1,5 +1,4 @@
-@mixin button{
-    
+@mixin button{    
     background: $bg-btn; 
     color: #FFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -14,12 +13,80 @@
         padding: 16px 50px;
     }      
     &.explore{
-    padding: 16px 35px;
+    padding: 16px 25px;
+        @include devices(pc) {
+            padding: 16px 35px;
+        }
     }
     &:hover {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
         transform: translateY(-1px);
-        background-color:linear-gradient(to top, lighten(#9356dc,20%), lighten(#ff79da,20%));
+        opacity:0.95;
+        background-color:linear-gradient(to top, lighten(#9356dc,30%), lighten(#ff79da,30%));
     }    
 }
 
+
+@mixin btn--coeur{
+    border:none;
+    background-color: white;    
+    margin-right: 15px;
+    height: 40px;
+    width: 55px;
+    @include devices (pc){
+        margin-right: 30px;
+    }
+    .vide{                    
+        font-size: 2rem;
+        background-color: #fff;
+        position: absolute;
+        color: $color-background-header--dark;
+        z-index:1;
+        right: 3px;
+        bottom:20px;   
+        @include devices (pc){
+            right: 15px;
+            bottom:20px; 
+        }                 
+    }
+    .rempli{
+        display: block;
+        font-size: 2rem;
+        position: absolute;
+        z-index:99;
+        right: 3px;
+        bottom:20px;       
+        transform: scale(0); 
+        @include devices (pc){
+            right: 15px;
+            bottom:20px; 
+        }                        
+    }
+    &:hover {         
+        .rempli {            
+            background-color: $bg-btn;
+            background: -moz-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            background: -webkit-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;                                                   
+            animation: remplissageCoeur 0.3s forwards;
+        }
+    }
+    i{
+        font-size: 25px;
+        margin-right: 2rem;             
+        &::before{display:initial}
+    }
+
+
+    @keyframes remplissageCoeur {
+    0%{transform: scale(0.1);}
+    20%{transform: scale(0.3);}
+    50%{transform: scale(0.5);}
+    70%{transform: scale(0.7);}
+    100%{transform: scale(1)}
+    }
+}
