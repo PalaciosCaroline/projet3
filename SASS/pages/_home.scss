@@ -29,7 +29,7 @@ padding-top: 50px;
 h2{
 padding-top:40px;
 padding-bottom: 20px;
-    @include devices (pc){
+    @include devices (pc){        
         padding-bottom:30px;
     }
 }
@@ -46,9 +46,7 @@ padding-bottom: 20px;
 
 .form_location {
     @include marge-page ;
-    // background-color: #eae9e9;
     background-color: $color-background-header--ligth;
-
     box-shadow: inset 1px 4px 9px -8px;   
     text-align: center;
     padding: 20px 0;
@@ -68,14 +66,11 @@ padding-bottom: 20px;
             color: $color-background-header--dark;
             font-weight: 700;
           }
-
     }
-
 }
 
 .main_header{
     @include marge-page ;
-
     background: $color-background-header--ultraligth;
     padding-bottom: 40px; 
     text-align: center;
@@ -91,15 +86,27 @@ padding-bottom: 20px;
     padding-bottom: 30px;
     & a {
         color:#000;
+        height: 100%;
     }
     & .card{
         height: 65px;
+        width: 100%;
         margin-left: 7px;
         margin-bottom: 25px;    
         border-radius: 15px 15px 15px 15px; 
         box-shadow: $box-shadow-card;
         background: $color-background-header--ultraligth;
         align-items: center;
+        @include devices (pc){
+            height: 70px;                       
+            width: 40vw;
+           margin: 25px auto;
+        } 
+        & p{
+            @include devices (pc){
+               margin-left: 20px;
+            }
+        }        
         
         &:hover{
             @include cardHover;
@@ -140,11 +147,9 @@ padding-bottom: 20px;
         align-content: space-between;
         height: 50vw;
         width: 100%;
+        margin-bottom: 30px;
         }
-        @include devices(maxi-pc) {
-            height: 900px;
-
-        }
+        
         & article{
         height: 100%;
         width: 100%;
@@ -169,15 +174,10 @@ padding-bottom: 20px;
            width: 47%;
            height: 45%;
         }
-        @include devices(maxi-pc) {
-          
+        @include devices(maxi-pc) {          
            max-width: 45%;
            height: 45%;
         }
-       
-        
-        
-        
         
         &_label_new::after{
         @include tag-new;
@@ -185,8 +185,10 @@ padding-bottom: 20px;
 
         &_box_img {
             width: 100%;
+            height: calc(100% - 70px);
             overflow: hidden;         
-            position: relative;            
+            position: relative;      
+            border-radius: 20px 20px 0 0;      
             img {
             width: 100%;
             height: 100%;
@@ -196,11 +198,15 @@ padding-bottom: 20px;
 
         &_box_text {
             background-color: #fff;
-            padding-left: 1rem;
+            padding-left: 1.1rem;
+            @include devices (pc) {
+                padding-left: 1.8rem;
+            }
            font-size: 0.8rem; 
            justify-content: space-between;
            align-items: center;
-           min-height: 70px;
+           border-radius: 0 0 20px 20px;  
+           height: 70px;  
            & header{
             flex-direction: column;
             align-content: center;
@@ -209,72 +215,9 @@ padding-bottom: 20px;
                 }
             }  
         }
+    }
+    & .btn--coeur {
+        @include btn--coeur;
     } 
 }
 
-.btn--coeur{
-    border:none;
-    background-color: white;    
-    margin-right: 30px;
-    height: 40px;
-    width: 50px;
-    .vide{                    
-        font-size: 2rem;
-        background-color: #fff;
-        position: absolute;
-        z-index:1;
-        right: 8px;
-        bottom:20px;   
-        @include devices (pc){
-            right: 15px;
-            bottom:20px; 
-        }                 
-    }
-    .rempli{
-        display: block;
-        font-size: 2rem;
-        position: absolute;
-        z-index:99;
-        right: 8px;
-        bottom:20px;       
-        transform: scale(0); 
-        @include devices (pc){
-            right: 15px;
-            bottom:20px; 
-        }                        
-    }
-    &:hover {
-         
-        .rempli {
-            color:rgb(181, 78, 181);
-            background-color: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            background: -moz-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            background: -webkit-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;                                                   
-            animation: remplissageCoeur 0.3s forwards;
-        }
-    }
-    i{
-        font-size: 25px;
-        margin-right: 2rem;
-                      
-        &::before{display:initial}
-    }
-}
-
-
-  
-
-
-
-@keyframes remplissageCoeur {
-0%{transform: scale(0.1);}
-20%{transform: scale(0.3);}
-50%{transform: scale(0.5);}
-70%{transform: scale(0.7);}
-100%{transform: scale(1)}
-}
