@@ -18,7 +18,7 @@ overflow: hidden;
 animation: loaderAnimation 2s forwards, gradient 15s ease infinite;
 animation-delay: 3s;    
 background-size: 400% 400%;
-}
+
 
  @keyframes gradient {
    0% {
@@ -727,4 +727,5 @@ margin-top: 1.8vh;
           animation-delay: 8s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
 }
