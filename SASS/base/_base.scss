@@ -24,3 +24,10 @@ a{
 .flex {
     display: flex;
 }
+
+/*alternative text to star icons (Customer reviews) for accessibility*/
+.alternative_text_accessibility {
+    position:absolute;
+    left:-9999px;
+  }
+/**/
