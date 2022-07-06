@@ -23,10 +23,10 @@ body{
     color:#000000
 }
 
-h1{
+.h1--home{
 padding-top: 50px;
 }
-h2{
+.h2--home{
 padding-top:40px;
 padding-bottom: 20px;
     @include devices (pc){        
