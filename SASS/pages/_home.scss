@@ -76,6 +76,10 @@ padding-bottom: 20px;
     text-align: center;
     .explore {
         @include button;
+        padding: 16px 25px;
+        @include devices(pc) {
+            padding: 16px 45px;
+        }
     }
 }
 
