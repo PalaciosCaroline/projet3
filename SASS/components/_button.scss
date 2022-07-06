@@ -12,17 +12,11 @@
     &.order{
         padding: 16px 50px;
     }      
-    &.explore{
-    padding: 16px 25px;
-        @include devices(pc) {
-            padding: 16px 35px;
-        }
-    }
     &:hover {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
         transform: translateY(-1px);
-        opacity:0.95;
-        background-color:linear-gradient(to top, lighten(#9356dc,30%), lighten(#ff79da,30%));
+        opacity:0.90;
+        // background-color:linear-gradient(to top, rgba(147,86,220,0.8),rgba(255,121,218,0.8);
     }    
 }
 
