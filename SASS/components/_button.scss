@@ -27,57 +27,73 @@
 }
 
 
- @mixin btn--coeur{
-     border:none;
-     background-color: white;    
-     margin-right: 15px;
-     height: 40px;
+ @mixin btn--heart{
+    border:none;
+    position: relative;
+    background-color: white;    
+    margin-right: 15px;
+    bottom: 3px;
+    height: 40px;
     width: 55px;
-     @include devices (pc){
-         margin-right: 30px;
-     }
-     .vide{                    
-         font-size: 2rem;
-        background-color: #fff;
-       position: absolute;
-        color: $color-background-header--dark;
+    @include devices (pc){
+        margin-right: 30px;
+    }
+    .empty{                    
+        position: absolute;
         z-index:1;
-         right: 5px;
-         bottom:14px;   
-        
-         @include devices (pc){
-            right: 31px;
-             bottom:6px; 
-        }                 
-     }
-     .rempli{
-         display: block;
-         font-size: 2rem;
-         position: absolute;
-         z-index:99;
-         right: 20px;
-         bottom:29px;       
-         transform: scale(0);
-         
-         @include devices (pc){
-            right: 46px;
-             bottom:22px; 
-         }                        
-     }
-     &:hover {         
-        .rempli {            
-            animation: remplissageCoeur 0.2s forwards;
-        }
-        .vide {
-            animation : disparitionCoeur 0.1s 0.2s forwards;
-        }
+        top:22%;
+        left:25%;            
+    }
+    .full{
+    display: block;       
+    position: absolute;
+    z-index:99;
+    top:22%;
+    left:25%;            
+    transform: scale(0); 
         .main-stop {
-            stop-color: #9356dc;
+            stop-color: $color-primary;
         }
-
         .alt-stop {
-            stop-color:#ff79da;
+            stop-color:$color-secondary;
+        }                   
+    }
+    &:hover {         
+        .full {            
+            animation: heartFilling 0.2s forwards;
+            transform-origin: center;
         }
+        .empty {
+            animation : disappearanceCoeur 0.8s 0.1s forwards;
+        }            
+    }
+    
+    
+
+    @keyframes heartFilling {
+     0%{transform: scale(0.1);
+        transform-origin:5px 0;}
+     20%{transform: scale(0.3);
+        transform-origin:5px 0;}
+     50%{transform: scale(0.5);transform-origin:5px 0;}
+     70%{transform: scale(0.7);transform-origin: 5px 0;}
+     100%{transform: scale(1);transform-origin: 5px 2;}
+    }
+
+     @keyframes disappearanceCoeur {
+    0%{transform:opacity(0.9);}
+    100%{transform:opacity(0);}
+    }
+}
+
+
+
+//en cas de remise des icons
+    //  i{
+    //      font-size: 25px;
+    //      margin-right: 2rem;             
+    //      &::before{display:initial}
+    //      pour coloration d'icon
             //  background-color: $bg-btn;
             //  background: -moz-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
             //  background: -webkit-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
@@ -85,95 +101,5 @@
             //  -webkit-background-clip: text;
             //  -moz-background-clip: text;
             //  background-clip: text;
-            //  -webkit-text-fill-color: transparent;                                                   
-            
-        }
-     
-     i{
-         font-size: 25px;
-         margin-right: 2rem;             
-         &::before{display:initial}
-     }
-
-
-     @keyframes remplissageCoeur {
-     0%{transform: scale(0.1);}
-     20%{transform: scale(0.3);}
-     50%{transform: scale(0.5);}
-     70%{transform: scale(0.7);}
-     100%{transform: scale(1);}
-     }
-
-     @keyframes disparitionCoeur {
-    0%{transform:opacity(0.9);}
-    100%{transform:opacity(0);}
-    }
- }
-
-.main-stop {
-    stop-color: #9356dc;
-  }
-.alt-stop {
-    stop-color:#ff79da;
-}
-
-
-
-
-// @mixin btn--coeur{
-//     border:none;
-//     background-color: white;    
-//     margin-right: 15px;
-//     height: 40px;
-//     width: 55px;
-//     @include devices (pc){
-//         margin-right: 30px;
-//     }
-//     .vide {                      
-//         position: absolute;
-//         fill: $color-background-header--dark;
-//         z-index:1;
-//         right: 3px;
-//         bottom:20px;  
-//         width: 35px;
-//         height: 35px;
-//         @include devices (pc){
-//             right: 12px;
-//             bottom:12px; 
-//         }                 
-//     }
-//     .rempli{
-//         display: block;
-
-//         position: absolute;
-//         z-index:99;
-//         right: 3px;
-//         bottom:20px;       
-//         transform: scale(0); 
-//         @include devices (pc){
-//             right: 15px;
-//             bottom:20px; 
-//         }                        
-//     }
-//     &:hover {         
-//         .rempli {                                     
-//             animation: remplissageCoeur 0.3s forwards;
-//         }
-//     }
-//     svg, i{
-//       width: 35px;
-//       height: 35px;
-                 
-//         &::before{display:initial}
-//     }
-
-
-//     @keyframes remplissageCoeur {
-//     0%{transform: scale(0.1);}
-//     20%{transform: scale(0.3);}
-//     50%{transform: scale(0.5);}
-//     70%{transform: scale(0.7);}
-//     100%{transform: scale(1)}
-//     }
-// }
-
+            //  -webkit-text-fill-color: transparent;                  
+    //  }
