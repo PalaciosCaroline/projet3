@@ -67,17 +67,12 @@ a {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-.body_footer li {
-  line-height: 25px;
-}
-.body_footer li:nth-child(1), .body_footer li:nth-child(2) {
-  font-weight: 500;
-}
 .body_footer h3, .body_footer a, .body_footer i {
   color: #FfffFF;
 }
 .body_footer span:not(i) {
   font-size: 1.1rem;
+  position: relative;
 }
 .body_footer .text {
   font-weight: 300;
@@ -85,6 +80,29 @@ a {
 .body_footer i {
   font-size: 0.8rem;
   margin-right: 1rem;
+}
+.body_footer li {
+  line-height: 25px;
+}
+.body_footer li:nth-child(1), .body_footer li:nth-child(2) {
+  font-weight: 500;
+}
+.body_footer li .footer_li_link {
+  padding-bottom: 5px;
+}
+.body_footer li .footer_li_link span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+.body_footer li .footer_li_link:hover span::after {
+  transform: scaleX(1);
 }
 
 .body {
@@ -107,7 +125,6 @@ a {
   animation-delay: 3s;
   background-size: 400% 400%;
 }
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -119,7 +136,7 @@ a {
     background-position: 0% 50%;
   }
 }
-.loader_logo {
+.loader_page .loader_logo {
   position: relative;
   font-family: "Shrikhand";
   margin: 0 auto;
@@ -131,7 +148,6 @@ a {
   color: white;
   opacity: 1;
 }
-
 @keyframes loaderAnimation {
   0% {
     overflow: visible;
@@ -146,16 +162,14 @@ a {
     top: -100%;
   }
 }
-.loader_logo span {
+.loader_page .loader_logo span {
   display: inline-block;
   text-shadow: 0 0 0 #ffffff;
   animation: smoky 2s 2s both, animate 2s 2s both;
 }
-
-.loader_logo span:nth-child(even) {
+.loader_page .loader_logo span:nth-child(even) {
   animation-name: smoky-mirror, animate;
 }
-
 @keyframes animate {
   0% {
     transform: rotate(0deg) translateY(0px);
@@ -188,35 +202,28 @@ a {
     opacity: 0;
   }
 }
-span:nth-child(1) {
+.loader_page span:nth-child(1) {
   animation-delay: 1.5s;
 }
-
-span:nth-child(2) {
+.loader_page span:nth-child(2) {
   animation-delay: 1.7s;
 }
-
-span:nth-child(3) {
+.loader_page span:nth-child(3) {
   animation-delay: 1.9s;
 }
-
-span:nth-child(4) {
+.loader_page span:nth-child(4) {
   animation-delay: 2.1s;
 }
-
-span:nth-child(5) {
+.loader_page span:nth-child(5) {
   animation-delay: 2.3s;
 }
-
-span:nth-child(6) {
+.loader_page span:nth-child(6) {
   animation-delay: 2.5s;
 }
-
-span:nth-child(7) {
+.loader_page span:nth-child(7) {
   animation-delay: 2.7s;
 }
-
-#cooking {
+.loader_page #cooking {
   position: relative;
   margin: 0 auto;
   top: 0;
@@ -224,33 +231,31 @@ span:nth-child(7) {
   height: 75vh;
   overflow: hidden;
 }
-
-#cooking #area {
+.loader_page #cooking #area {
   position: absolute;
-  bottom: 6.5%;
-  right: 85px;
+  bottom: 6.7%;
+  right: 120px;
   width: 50%;
   height: 50%;
   background-color: transparent;
   transform-origin: 15% 40%;
 }
 @media only screen and (min-width: 950px) {
-  #cooking #area {
+  .loader_page #cooking #area {
     bottom: 6%;
+    right: 95px;
   }
 }
-
-#cooking #area #sides {
+.loader_page #cooking #area #sides {
   position: absolute;
   width: 100%;
   height: 100%;
   transform-origin: 15% 40%;
 }
-
-#cooking #area #sides #handle {
+.loader_page #cooking #area #sides #handle {
   position: absolute;
   bottom: 18%;
-  right: 80%;
+  right: 60%;
   width: 35%;
   height: 20%;
   background-color: transparent;
@@ -260,15 +265,14 @@ span:nth-child(7) {
   transform: rotate(20deg) rotateX(0deg) scale(1.3, 0.9);
 }
 @media only screen and (min-width: 950px) {
-  #cooking #area #sides #handle {
+  .loader_page #cooking #area #sides #handle {
     bottom: 14%;
     right: 82%;
     width: 35%;
     height: 20%;
   }
 }
-
-#cooking #area #sides #pan {
+.loader_page #cooking #area #sides #pan {
   position: absolute;
   bottom: 20%;
   right: 30%;
@@ -279,69 +283,94 @@ span:nth-child(7) {
   transform-origin: -15% 0;
 }
 @media only screen and (min-width: 950px) {
-  #cooking #area #sides #pan {
+  .loader_page #cooking #area #sides #pan {
     bottom: 17%;
     right: 36%;
     width: 50%;
     height: 8%;
   }
 }
-
-#cooking .bubble {
+.loader_page #cooking .bubble {
   position: absolute;
   border-radius: 100%;
   box-shadow: 0 0 0.25vh #FF79DA;
   opacity: 0;
 }
-
-#cooking .bubble:nth-child(1) {
+.loader_page #cooking .bubble:nth-child(1) {
   margin-top: 1.9vh;
   bottom: 10vh;
-  left: 51%;
+  left: 52%;
   width: 2.5vh;
   height: 2.5vh;
   background-color: #9356DC;
   animation: bubble 2s cubic-bezier(0.53, 0.16, 0.39, 0.96) infinite;
 }
-
-#cooking .bubble:nth-child(2) {
+.loader_page #cooking .bubble:nth-child(2) {
   margin-top: 1.6vh;
   bottom: 10vh;
-  left: 46%;
+  left: 47%;
   width: 2vh;
   height: 2vh;
   background-color: #FF79DA;
   animation: bubble 2s ease-in-out 0.35s infinite;
 }
-
-#cooking .bubble:nth-child(3) {
+.loader_page #cooking .bubble:nth-child(3) {
   margin-top: 1.8vh;
   bottom: 10%;
-  left: 42%;
+  left: 46%;
   width: 1.5vh;
   height: 1.5vh;
   background-color: #FF79DA;
   animation: bubble 1.5s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.55s infinite;
 }
-
-#cooking .bubble:nth-child(4) {
+.loader_page #cooking .bubble:nth-child(4) {
   margin-top: 1.8vh;
-  left: 48%;
+  left: 53%;
   width: 1.2vh;
   height: 1.2vh;
   background-color: #9356DC;
   animation: bubble 1.8s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.55s infinite;
 }
-
-#cooking .bubble:nth-child(5) {
+.loader_page #cooking .bubble:nth-child(5) {
   margin-top: 1.9vh;
-  left: 55%;
+  left: 45%;
   width: 1.1vh;
   height: 1.1vh;
   background-color: #FF79DA;
   animation: bubble 1.6s ease-in-out 1s infinite;
 }
-
+.loader_page #cooking .bubble:nth-child(6) {
+  margin-top: 1.9vh;
+  left: 44%;
+  width: 0.8vh;
+  height: 0.8vh;
+  background-color: #FF79DA;
+  animation: bubble 1.7s ease-in-out 1s infinite;
+}
+.loader_page #cooking .bubble:nth-child(7) {
+  margin-top: 1.9vh;
+  left: 54%;
+  width: 1.2vh;
+  height: 1.2vh;
+  background-color: #FF79DA;
+  animation: bubble 1.4s ease-in-out 1s infinite;
+}
+.loader_page #cooking .bubble:nth-child(8) {
+  margin-top: 1.9vh;
+  left: 59%;
+  width: 0.9vh;
+  height: 0.9vh;
+  background-color: #FF79DA;
+  animation: bubble 1.9s ease-in-out 1s infinite;
+}
+.loader_page #cooking .bubble:nth-child(9) {
+  margin-top: 1.9vh;
+  left: 58%;
+  width: 1.2vh;
+  height: 1.2vh;
+  background-color: #FF79DA;
+  animation: bubble 1.6s ease-in-out 1s infinite;
+}
 @keyframes bubble {
   0% {
     transform: scale(0.15, 0.15);
@@ -358,7 +387,7 @@ span:nth-child(7) {
     opacity: 0;
   }
 }
-#blunt_container {
+.loader_page #blunt_container {
   width: 50px;
   height: 90px;
   margin: auto;
@@ -372,7 +401,6 @@ span:nth-child(7) {
   -webkit-animation: feelingit 5s infinite;
   animation: feelingit 5s infinite;
 }
-
 @-webkit-keyframes feelingit {
   50% {
     -webkit-transform: translateY(-20px);
@@ -543,15 +571,14 @@ span:nth-child(7) {
     opacity: 0;
   }
 }
-.smoke-group {
+.loader_page .smoke-group {
   width: 100px;
   height: 200px;
   margin-top: -170px;
   margin-left: -30px;
   position: absolute;
 }
-
-.smoke {
+.loader_page .smoke {
   position: absolute;
   bottom: 0;
   left: calc(50% - 7.5px);
@@ -563,8 +590,7 @@ span:nth-child(7) {
   filter: blur(6px);
   opacity: 0;
 }
-
-.smoke:nth-child(1) {
+.loader_page .smoke:nth-child(1) {
   -webkit-animation-name: smoke3;
   animation-name: smoke3;
   -webkit-animation-duration: 2s;
@@ -576,8 +602,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(2) {
+.loader_page .smoke:nth-child(2) {
   -webkit-animation-name: smoke2;
   animation-name: smoke2;
   -webkit-animation-duration: 3s;
@@ -589,8 +614,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(3) {
+.loader_page .smoke:nth-child(3) {
   -webkit-animation-name: smoke4;
   animation-name: smoke4;
   -webkit-animation-duration: 5s;
@@ -602,8 +626,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(4) {
+.loader_page .smoke:nth-child(4) {
   -webkit-animation-name: smoke2;
   animation-name: smoke2;
   -webkit-animation-duration: 5s;
@@ -615,8 +638,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(5) {
+.loader_page .smoke:nth-child(5) {
   -webkit-animation-name: smoke3;
   animation-name: smoke3;
   -webkit-animation-duration: 2s;
@@ -628,8 +650,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(6) {
+.loader_page .smoke:nth-child(6) {
   -webkit-animation-name: smoke3;
   animation-name: smoke3;
   -webkit-animation-duration: 4s;
@@ -641,8 +662,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(7) {
+.loader_page .smoke:nth-child(7) {
   -webkit-animation-name: smoke1;
   animation-name: smoke1;
   -webkit-animation-duration: 2s;
@@ -654,8 +674,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(8) {
+.loader_page .smoke:nth-child(8) {
   -webkit-animation-name: smoke1;
   animation-name: smoke1;
   -webkit-animation-duration: 5s;
@@ -667,8 +686,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(9) {
+.loader_page .smoke:nth-child(9) {
   -webkit-animation-name: smoke5;
   animation-name: smoke5;
   -webkit-animation-duration: 5s;
@@ -680,8 +698,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(10) {
+.loader_page .smoke:nth-child(10) {
   -webkit-animation-name: smoke4;
   animation-name: smoke4;
   -webkit-animation-duration: 2s;
@@ -693,8 +710,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(11) {
+.loader_page .smoke:nth-child(11) {
   -webkit-animation-name: smoke5;
   animation-name: smoke5;
   -webkit-animation-duration: 3s;
@@ -706,8 +722,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(12) {
+.loader_page .smoke:nth-child(12) {
   -webkit-animation-name: smoke4;
   animation-name: smoke4;
   -webkit-animation-duration: 2s;
@@ -719,8 +734,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(13) {
+.loader_page .smoke:nth-child(13) {
   -webkit-animation-name: smoke5;
   animation-name: smoke5;
   -webkit-animation-duration: 4s;
@@ -732,8 +746,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(14) {
+.loader_page .smoke:nth-child(14) {
   -webkit-animation-name: smoke2;
   animation-name: smoke2;
   -webkit-animation-duration: 4s;
@@ -745,8 +758,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(15) {
+.loader_page .smoke:nth-child(15) {
   -webkit-animation-name: smoke5;
   animation-name: smoke5;
   -webkit-animation-duration: 4s;
@@ -758,8 +770,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(16) {
+.loader_page .smoke:nth-child(16) {
   -webkit-animation-name: smoke3;
   animation-name: smoke3;
   -webkit-animation-duration: 3s;
@@ -771,8 +782,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(17) {
+.loader_page .smoke:nth-child(17) {
   -webkit-animation-name: smoke5;
   animation-name: smoke5;
   -webkit-animation-duration: 4s;
@@ -784,8 +794,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(18) {
+.loader_page .smoke:nth-child(18) {
   -webkit-animation-name: smoke1;
   animation-name: smoke1;
   -webkit-animation-duration: 4s;
@@ -797,8 +806,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(19) {
+.loader_page .smoke:nth-child(19) {
   -webkit-animation-name: smoke1;
   animation-name: smoke1;
   -webkit-animation-duration: 2s;
@@ -810,8 +818,7 @@ span:nth-child(7) {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
-.smoke:nth-child(20) {
+.loader_page .smoke:nth-child(20) {
   -webkit-animation-name: smoke4;
   animation-name: smoke4;
   -webkit-animation-duration: 3s;
@@ -822,14 +829,6 @@ span:nth-child(7) {
   animation-delay: 8s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-}
-
-.main-stop {
-  stop-color: #9356dc;
-}
-
-.alt-stop {
-  stop-color: #ff79da;
 }
 
 /*#9356DC #FF79DA #99E2D0*/
@@ -904,23 +903,20 @@ h2 {
   display: block;
   margin: auto;
   margin-top: 30px;
+  padding: 16px 25px;
 }
 .main_header .explore.order {
   padding: 16px 50px;
 }
-.main_header .explore.explore {
-  padding: 16px 25px;
-}
-@media only screen and (min-width: 950px) {
-  .main_header .explore.explore {
-    padding: 16px 35px;
-  }
-}
 .main_header .explore:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
   transform: translateY(-1px);
-  opacity: 0.95;
-  background-color: linear-gradient(to top, #e4d5f6, white);
+  opacity: 0.9;
+}
+@media only screen and (min-width: 950px) {
+  .main_header .explore {
+    padding: 16px 45px;
+  }
 }
 
 .features {
@@ -1076,85 +1072,70 @@ h2 {
 .restaurant_card_box_text header h3 {
   padding-bottom: 5px;
 }
-.restaurant .btn--coeur {
+.restaurant .btn--heart {
   border: none;
+  position: relative;
   background-color: white;
   margin-right: 15px;
+  bottom: 3px;
   height: 40px;
   width: 55px;
 }
 @media only screen and (min-width: 950px) {
-  .restaurant .btn--coeur {
+  .restaurant .btn--heart {
     margin-right: 30px;
   }
 }
-.restaurant .btn--coeur .vide {
-  font-size: 2rem;
-  background-color: #fff;
+.restaurant .btn--heart .empty {
   position: absolute;
-  color: #414040;
   z-index: 1;
-  right: 5px;
-  bottom: 14px;
+  top: 22%;
+  left: 25%;
 }
-@media only screen and (min-width: 950px) {
-  .restaurant .btn--coeur .vide {
-    right: 31px;
-    bottom: 6px;
-  }
-}
-.restaurant .btn--coeur .rempli {
+.restaurant .btn--heart .full {
   display: block;
-  font-size: 2rem;
   position: absolute;
   z-index: 99;
-  right: 20px;
-  bottom: 29px;
+  top: 22%;
+  left: 25%;
   transform: scale(0);
 }
-@media only screen and (min-width: 950px) {
-  .restaurant .btn--coeur .rempli {
-    right: 46px;
-    bottom: 22px;
-  }
+.restaurant .btn--heart .full .main-stop {
+  stop-color: #9356DC;
 }
-.restaurant .btn--coeur:hover .rempli {
-  animation: remplissageCoeur 0.2s forwards;
+.restaurant .btn--heart .full .alt-stop {
+  stop-color: #FF79DA;
 }
-.restaurant .btn--coeur:hover .vide {
-  animation: disparitionCoeur 0.1s 0.2s forwards;
+.restaurant .btn--heart:hover .full {
+  animation: heartFilling 0.2s forwards;
+  transform-origin: center;
 }
-.restaurant .btn--coeur:hover .main-stop {
-  stop-color: #9356dc;
+.restaurant .btn--heart:hover .empty {
+  animation: disappearanceCoeur 0.8s 0.1s forwards;
 }
-.restaurant .btn--coeur:hover .alt-stop {
-  stop-color: #ff79da;
-}
-.restaurant .btn--coeur i {
-  font-size: 25px;
-  margin-right: 2rem;
-}
-.restaurant .btn--coeur i::before {
-  display: initial;
-}
-@keyframes remplissageCoeur {
+@keyframes heartFilling {
   0% {
     transform: scale(0.1);
+    transform-origin: 5px 0;
   }
   20% {
     transform: scale(0.3);
+    transform-origin: 5px 0;
   }
   50% {
     transform: scale(0.5);
+    transform-origin: 5px 0;
   }
   70% {
     transform: scale(0.7);
+    transform-origin: 5px 0;
   }
   100% {
     transform: scale(1);
+    transform-origin: 5px 2;
   }
 }
-@keyframes disparitionCoeur {
+@keyframes disappearanceCoeur {
   0% {
     transform: opacity(0.9);
   }
