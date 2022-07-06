@@ -26,6 +26,13 @@ a {
   display: flex;
 }
 
+/*alternative text to star icons (Customer reviews) for accessibility*/
+.alternative_text_accessibility {
+  position: absolute;
+  left: -9999px;
+}
+
+/**/
 .home_header_page {
   padding-top: 25px;
   padding-bottom: 15px;
@@ -60,7 +67,7 @@ a {
   padding-left: 5.5%;
   padding-top: 30px;
   background-color: #333;
-  height: 200px;
+  padding-bottom: 40px;
 }
 .body_footer h3 {
   font-weight: 500;
@@ -79,7 +86,7 @@ a {
 }
 .body_footer i {
   font-size: 0.8rem;
-  margin-right: 1rem;
+  align-self: center;
 }
 .body_footer li {
   line-height: 25px;
@@ -87,8 +94,15 @@ a {
 .body_footer li:nth-child(1), .body_footer li:nth-child(2) {
   font-weight: 500;
 }
+.body_footer li:nth-child(1) i {
+  margin-right: 14px;
+}
+.body_footer li:nth-child(2) i {
+  margin-right: 10px;
+}
 .body_footer li .footer_li_link {
   padding-bottom: 5px;
+  width: 220px;
 }
 .body_footer li .footer_li_link span::after {
   content: "";
@@ -121,6 +135,7 @@ a {
   background-color: #333;
   opacity: 0.97;
   overflow: hidden;
+  animation: loaderAnimation 2s forwards, gradient 15s ease infinite;
   animation-delay: 3s;
   background-size: 400% 400%;
 }
@@ -837,16 +852,16 @@ body {
   color: #000000;
 }
 
-h1 {
+.h1--home {
   padding-top: 50px;
 }
 
-h2 {
+.h2--home {
   padding-top: 40px;
   padding-bottom: 20px;
 }
 @media only screen and (min-width: 950px) {
-  h2 {
+  .h2--home {
     padding-bottom: 30px;
   }
 }
