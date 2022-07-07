@@ -1188,7 +1188,7 @@ body {
 .menu {
   position: relative;
   z-index: 1;
-  background-color: rgb(218, 217, 217);
+  background-color: #f6f5f5;
   margin-top: -3rem;
   border-radius: 25px 25px 0 0;
   padding-bottom: 60px;
@@ -1217,7 +1217,7 @@ body {
   height: 40px;
   width: 55px;
   margin: auto 8px;
-  background-color: rgb(218, 217, 217);
+  background-color: #f6f5f5;
 }
 @media only screen and (min-width: 950px) {
   .menu .menu_header_title .btn--heart {
@@ -1308,7 +1308,10 @@ body {
   overflow: hidden;
 }
 .menu_list_item {
-  width: 100%;
+  box-sizing: border-box;
+  width: 99.8%;
+  margin-left: 0.1%;
+  margin-right: 0.1%;
   display: flex;
   flex-wrap: nowrap;
   background-color: #fff;
@@ -1319,6 +1322,7 @@ body {
   justify-content: space-between;
   margin-bottom: 15px;
   overflow: hidden;
+  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.3);
 }
 .menu_list .menu_list_item {
   animation: slidePage 1s backwards;
