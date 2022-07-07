@@ -15,7 +15,7 @@
 .menu{
     position: relative;
     z-index: 1;
-    background-color: $color-background-header;
+    background-color:$color-background-header--menu;
     margin-top: -3rem;
     border-radius: 25px 25px 0 0;
     padding-bottom: 60px;
@@ -38,7 +38,7 @@
         .btn--heart{    
             @include  btn--heart;
             margin:auto 8px;         
-            background-color: $color-background-header;
+            background-color: $color-background-header--menu;
         }
     }
    
@@ -72,7 +72,10 @@
         overflow:hidden;
 
         &_item{
-            width: 100%;
+            box-sizing: border-box;
+            width: 99.8%;
+            margin-left: 0.1%;
+            margin-right: 0.1%;
             display: flex;
             flex-wrap: nowrap;
             background-color: #fff;
@@ -83,6 +86,7 @@
             justify-content: space-between;
             margin-bottom: 15px;
             overflow: hidden;
+            box-shadow :1px 1px 8px 1px rgba(0, 0, 0, 0.3);
         }
             .menu_list_item{
                 animation: slidePage 1s backwards;
