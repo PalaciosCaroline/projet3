@@ -1,0 +1,216 @@
+
+
+.menu_streamer_img {
+    overflow: hidden;
+    height: 260px;   
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    } 
+}
+
+.menu{
+    position: relative;
+    z-index: 1;
+    background-color: $color-background-header;
+    margin-top: -3rem;
+    border-radius: 25px 25px 0 0;
+    padding-bottom: 60px;
+    @include padding-box;
+    
+    .menu_header_title{   
+        border-radius: 50px 50px 0 0;
+        display: flex;
+        padding-top: 20px;
+        justify-content: space-between;
+        align-content: center;
+   
+        h1{
+            font-family: $font-family-title;
+            font-size: 2em;
+            font-weight: 600;
+            display: block;
+        }
+
+        .btn--heart{    
+            @include  btn--heart;
+            margin:auto 8px;         
+            background-color: $color-background-header;
+        }
+    }
+   
+    .dish_type {
+        position: relative;
+        font-size: 1.2em;
+        font-weight: 300;
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        &::after{
+        content:'';
+        position: absolute;
+        width: 45px;
+        height: 4px;
+        bottom:-8px;
+        display: block;
+        background-color: $color-tertiary;
+        }
+        .menu_list .dish_type:nth-child(1){
+            animation: slidePage 0.1s 0.2 backwards;
+        }
+        
+
+    } 
+        
+    &_list{
+        display: flex;
+        flex-direction: column;
+        overflow:hidden;
+
+        &_item{
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: $color-background-header;
+            height: 60px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+            .menu_list_item{
+                animation: slidePage 1s backwards;
+                @for $i from 1 through 15 {
+                    &:nth-child(#{$i}){
+                        animation-delay: (0.15s * $i) + 0.15s ;
+    
+                    }
+                }
+            }
+        
+        
+        &   .item_text{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding-left:10px;  
+                padding-right: 15px;            
+                width: calc(100% - 60px);
+                box-sizing: border-box;
+                h3{
+                    font-size: 1.1em;
+                
+                    margin:0 0 7px 0;
+                    
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                } 
+                p.text{
+                    font-size: 0.9em;
+                    font-weight: 300;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    margin:0;  
+                    margin-right: 15px;
+                }                               
+        }
+            
+
+        .price_check{                    
+            width: 105px;
+            margin-right: -60px;                              
+            justify-content: space-between;
+            flex-shrink: 0;
+            height: 60px;       
+            @include devices(pc){
+                width: 125px;
+                 margin-right: -80px;  
+            }
+                
+            span.price{
+                font-weight: 400;                    
+                width: 45px;
+                display: block;
+            }
+
+            .menu_list_item_check{
+                flex-grow: 2;   
+                background-color: $color-tertiary;
+                border-radius: 0 15px 15px 0;                    
+                width: 60px;               
+                @include devices(pc){
+                    width: 80px;
+                }
+                i {
+                    color: #ffffff;
+                    font-size: 1.2em;
+                }    
+            
+            }
+        }    
+    }
+}   
+
+
+.menu_list_item:hover .item_text{
+    width: calc(95% - 120px);
+    @include devices(pc){
+    width: calc(90% - 135px);
+    }
+}
+    
+.menu_list_item:hover .price_check {
+    // margin-right: 0;
+    animation: slidingShutter 0.3s ease-in-out both;
+}
+.menu_list_item:hover i{          
+    animation: iconRotate 0.3s  0.15s linear both;
+}           
+
+        
+@keyframes slidePage {
+    0%{
+        opacity: 0;
+        margin-top: 35px;
+    }
+    50%{
+        opacity: 0.7;
+        margin-top: 10px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+
+@keyframes iconRotate{
+    0%{transform: rotate(180deg);}  
+    100%{transform: rotate(360deg) ; }
+}
+
+
+@keyframes slidingShutter {
+    0% { margin-right: -60px;
+        @include devices(pc){
+            margin-right: -80px;
+       }    
+    }
+    100% {        
+        margin-right: 0;
+    }
+}
+    
+.order{
+    @include button;
+    padding: 16px 50px;
+
+}

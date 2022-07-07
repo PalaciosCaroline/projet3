@@ -1,57 +1,47 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
 
 .home_header_page{
-    padding-top: 25px;
-    padding-bottom: 15px;
-    justify-content: center;
-    align-content: center;
-    img{
-    
-        width: 220px;
-    }
-
-
-}
-
-
-.menu_header_page{
-
-
-padding-top: 25px;
-    padding-bottom: 15px;
-   
-    align-content: center;
-
+    height: 60px;
+     width: 100%;
+     position: relative;
+     @include devices(pc){
+         height: 70px;
+     } 
      img{
-  width: 220px;
-   padding-top: 25px;
-    padding-bottom: 15px;
-    margin: auto;
-    
-    }
-
-}
-
-
-.nav_home{
-    display: block;
-     color: darken($color-background-header, 40%);
-
- text-align: center;
-   font-size: 1.4rem;
-   
-}
-
-// .nav_return{
-//     display: block;
-//          position: absolute;
-//  top:0;
-//     left:0;
-//     width: 60px;
-//     height: 60px;
-//     align-content:center;
-    
-// }
+         margin:auto;
+         width: 170px;
+         @include devices(pc){
+             width: 220px;
+         } 
+     }
  
+ 
+ }
+ 
+ .nav_returnHome{
+    
+     a {
+     display: block;
+     height: 60px;
+     left:20px;
+     position:absolute;
+     @include devices(pc){
+         width: 80px;
+         left:15px;
+         height: 70px;
+     }
+    
+         i{
+            position: absolute;
+             font-size: 1.4rem;
+             color: $color-background-header--dark;
+             top:50%;
+             left: 50%;
+             transform: translate(-50%,-50%);
+             @include devices(pc){        
+                 font-size:2rem;
+             }
+         }
+     }
+ 
+ }
+
