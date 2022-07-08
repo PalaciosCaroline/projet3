@@ -29,7 +29,7 @@ padding-top: 50px;
 .h2--home{
 padding-top:40px;
 padding-bottom: 20px;
-    @include devices (pc){        
+    @include devices (small-pc){        
         padding-bottom:30px;
     }
 }
@@ -77,7 +77,7 @@ padding-bottom: 20px;
     .explore {
         @include button;
         padding: 16px 25px;
-        @include devices(pc) {
+        @include devices(small-pc) {
             padding: 16px 45px;
         }
     }
@@ -101,13 +101,13 @@ padding-bottom: 20px;
         box-shadow: $box-shadow-card;
         background: $color-background-header--ultraligth;
         align-items: center;
-        @include devices (pc){
+        @include devices (small-pc){
             height: 70px;                       
             width: 40vw;
            margin: 25px auto;
         } 
         & p{
-            @include devices (pc){
+            @include devices (small-pc){
                margin-left: 20px;
             }
         }        
@@ -144,7 +144,7 @@ padding-bottom: 20px;
 
 .restaurant{
         flex-direction: column;
-        @include devices(pc) {
+        @include devices(small-pc) {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -173,7 +173,7 @@ padding-bottom: 20px;
         @include cardHover;
         }
     
-        @include devices(pc) {
+        @include devices(small-pc) {
             margin-bottom: 0;
            width: 47%;
            height: 45%;
@@ -203,7 +203,7 @@ padding-bottom: 20px;
         &_box_text {
             background-color: #fff;
             padding-left: 1.1rem;
-            @include devices (pc) {
+            @include devices (small-pc) {
                 padding-left: 1.8rem;
             }
            font-size: 0.8rem; 

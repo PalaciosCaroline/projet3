@@ -27,7 +27,7 @@
     bottom: 3px;
     height: 40px;
     width: 55px;
-    @include devices (pc){
+    @include devices (small-pc){
         margin-right: 30px;
     }
     .empty{                    
