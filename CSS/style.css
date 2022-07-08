@@ -153,7 +153,6 @@ a {
   background-color: #333;
   opacity: 0.98;
   overflow: hidden;
-  animation: loaderAnimation 2s forwards, gradient 15s ease infinite;
   animation-delay: 3s;
   background-size: 400% 400%;
 }
@@ -325,10 +324,10 @@ a {
 }
 .loader_page #cooking #area #table {
   position: absolute;
-  bottom: 12%;
-  right: -9%;
+  bottom: 14%;
+  right: -25%;
   width: 150%;
-  height: 10%;
+  height: 6%;
   background-color: #99E2D0;
   border-radius: 0.2em 0.2em 0.2em 0.2em;
   transform-origin: -15% 0;
@@ -344,9 +343,9 @@ a {
 .loader_page #cooking #area #bougeoir {
   position: absolute;
   bottom: 20%;
-  right: 30%;
-  width: 5%;
-  height: 1%;
+  right: -10%;
+  width: 20%;
+  height: 4%;
   background-color: #B05428;
   z-index: 2;
   border-radius: 0 0 1.4em 1.4em;
@@ -463,7 +462,7 @@ a {
   margin: auto;
   position: absolute;
   top: 55vh;
-  left: 6vw;
+  left: 5vw;
   bottom: 0;
   right: 28%;
   -webkit-transform: translateY(0);
@@ -911,19 +910,31 @@ a {
   -webkit-animation: blink 0.1s infinite;
   animation: blink 0.1s infinite;
   transform: scale(0.2);
-  top: 9%;
-  left: 46%;
+  top: -4%;
+  left: 50%;
   z-index: 1;
+}
+@media only screen and (min-width: 950px) {
+  .candle {
+    top: 8%;
+    left: 46%;
+  }
 }
 
 .wick {
   position: absolute;
   width: 6px;
   height: 50px;
-  top: 110px;
+  top: 180px;
   left: 50%;
   transform: translateX(-30%) skewX(1deg);
   border-radius: 10%;
+}
+@media only screen and (min-width: 950px) {
+  .wick {
+    top: 110px;
+    left: 50%;
+  }
 }
 
 .wick:before {
