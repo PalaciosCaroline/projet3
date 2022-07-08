@@ -112,7 +112,6 @@
             flex-wrap: nowrap;
             background-color: #fff;
             border-radius: 15px;
-            box-shadow: $color-background-header;
             height: 60px;
             align-items: center;
             justify-content: space-between;
@@ -204,6 +203,9 @@
 .menu_list_item:hover .price_check {
     // margin-right: 0;
     animation: slidingShutter 0.3s ease-in-out both;
+    @include devices(small-pc){
+        animation: slidingShutter 0.3s ease-in-out both;
+   }    
 }
 .menu_list_item:hover i{          
     animation: iconRotate 0.3s  0.15s linear both;
@@ -234,9 +236,13 @@
 
 @keyframes slidingShutter {
     0% { margin-right: -60px;
-        @include devices(small-pc){
-            margin-right: -80px;
-       }    
+    }
+    100% {        
+        margin-right: 0;
+    }
+}
+@keyframes slidingShutter--smallpc {
+    0% { margin-right: -80px;
     }
     100% {        
         margin-right: 0;
