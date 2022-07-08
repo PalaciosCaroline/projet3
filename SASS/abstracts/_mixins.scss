@@ -2,38 +2,6 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
-
-@mixin tag-new{
-    content: "Nouveau";
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    background-color: $color-tertiary;
-    color: darken($color-tertiary, 40%);
-    font-weight: 700;
-    padding: 5px 15px;  
-    border-radius: 3px;  
-}
-
-// @mixin child($n) {
-//   &:nth-child(#{$n}){
-//     content:'#{$n}';  
-//     @mixin tag-count{      
-//       // content:'#{$n}';
-//       position: absolute;
-//       height: 25px;
-//       width: 25px;
-//       background-color: $color-primary;
-//       border-radius: 50%;
-//       margin-right: 10px;
-//       margin-left: -14px;
-//       color: $color-white;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//     } 
-//   }
-// 
 @mixin devices ($breakpoint) { //the name of the mixin is devices
   
     @if $breakpoint == tablet {    
@@ -57,12 +25,23 @@
     }
   }
   @if $breakpoint == maxi-pc {
-    @media only screen and (min-width: 2000px) {
+    @media only screen and (min-width: 2300px) {
       @content;
     }
   }
 }
 
+@mixin tag-new{
+  content: "Nouveau";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background-color: $color-tertiary;
+  color: darken($color-tertiary, 40%);
+  font-weight: 700;
+  padding: 5px 15px;  
+  border-radius: 3px;  
+}
 
 @mixin cardHover {
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);

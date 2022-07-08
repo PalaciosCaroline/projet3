@@ -2,12 +2,6 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
-
-
-
-
-
 /// Copy text color
 /// @type Color
 $text-color: rgb(34, 34, 34) !default;
@@ -23,7 +17,6 @@ $bg-btn:linear-gradient(to top, #9356dc 10%, #ff79da 80%);
 
 $box-shadow-card: 1px 1px 6px 1px rgba(0, 0, 0, 0.3);
 
-
 // $color-quatuary: ;
 $color-background-header:rgb(218, 217, 217);
 $color-background-header--ultraligth:lighten($color-background-header,12%);
@@ -31,3 +24,5 @@ $color-background-header--menu :lighten($color-background-header,11%);
 $color-background-header--ligth :#eae9e9;
 $color-background-header--dark:darken($color-background-header, 60%);
 
+$font-family-title: 'Shrikhand','Roboto',sans-serif;
+$font-family-text: 'Roboto',sans-serif;

@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
 body {
   font-family: "Roboto";
+  height: 100vh;
 }
 
 a {
@@ -261,6 +262,12 @@ a {
   top: 0;
   width: 75vh;
   height: 75vh;
+}
+@media only screen and (min-width: 1300px) {
+  .loader_page #cooking {
+    height: 500px;
+    width: 500px;
+  }
 }
 .loader_page #cooking #area {
   position: absolute;
@@ -1372,6 +1379,12 @@ body {
   background: linear-gradient(to top, #9356dc 10%, #ff79da 80%);
   box-shadow: 0 0 50px -20px rgba(255, 255, 255, 0.5) inset, 1px 3px 3px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
+@media only screen and (min-width: 2300px) {
+  .main_header .explore {
+    padding: 30px 120px;
+    border-radius: 50px;
+  }
+}
 @media only screen and (min-width: 950px) {
   .main_header .explore {
     padding: 16px 45px;
@@ -1481,7 +1494,7 @@ body {
     height: 45%;
   }
 }
-@media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 2300px) {
   .restaurant_card {
     max-width: 45%;
     height: 45%;
@@ -1607,11 +1620,37 @@ body {
   overflow: hidden;
   height: 260px;
 }
+@media only screen and (min-width: 2300px) {
+  .menu_streamer_img {
+    height: 350px;
+  }
+}
 .menu_streamer_img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+@media only screen and (min-width: 950px) {
+  .menu_box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu_box .menu_list {
+    width: 32%;
+  }
+}
+@media only screen and (min-width: 950px) and (min-width: 2300px) {
+  .menu_box .menu_list_item {
+    height: 100px;
+  }
+  .menu_box .menu_list_item .price_check {
+    height: 100%;
+  }
+  .menu_box .menu_list_item .price_check .price {
+    align-self: center;
+  }
 }
 
 .menu {
@@ -1631,11 +1670,26 @@ body {
   justify-content: space-between;
   align-content: center;
 }
+@media only screen and (min-width: 2300px) {
+  .menu .menu_header_title {
+    padding-top: 50px;
+  }
+}
 .menu .menu_header_title h1 {
   font-family: "shrikhandregular";
   font-size: 2em;
   font-weight: 600;
   display: block;
+}
+@media only screen and (min-width: 950px) {
+  .menu .menu_header_title h1 {
+    padding-bottom: 25px;
+  }
+}
+@media only screen and (min-width: 2300px) {
+  .menu .menu_header_title h1 {
+    font-size: 2.5rem;
+  }
 }
 .menu .menu_header_title .btn--heart {
   border: none;
@@ -1928,4 +1982,10 @@ body {
   opacity: 0.9;
   background: linear-gradient(to top, #9356dc 10%, #ff79da 80%);
   box-shadow: 0 0 50px -20px rgba(255, 255, 255, 0.5) inset, 1px 3px 3px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0.8);
+}
+@media only screen and (min-width: 2300px) {
+  .order {
+    padding: 30px 120px;
+    border-radius: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */
