@@ -153,6 +153,7 @@ a {
   background-color: #333;
   opacity: 0.98;
   overflow: hidden;
+  animation: loaderAnimation 2s forwards, gradient 15s ease infinite;
   animation-delay: 3s;
   background-size: 400% 400%;
 }
@@ -324,20 +325,20 @@ a {
 }
 .loader_page #cooking #area #table {
   position: absolute;
-  bottom: 14%;
+  bottom: 16%;
   right: -25%;
   width: 150%;
-  height: 6%;
+  height: 4%;
   background-color: #99E2D0;
   border-radius: 0.2em 0.2em 0.2em 0.2em;
   transform-origin: -15% 0;
 }
 @media only screen and (min-width: 950px) {
   .loader_page #cooking #area #table {
-    bottom: 11%;
+    bottom: 15%;
     right: -28%;
     width: 150%;
-    height: 6%;
+    height: 3%;
   }
 }
 .loader_page #cooking #area #bougeoir {
@@ -353,8 +354,8 @@ a {
 }
 @media only screen and (min-width: 950px) {
   .loader_page #cooking #area #bougeoir {
-    bottom: 17%;
-    right: -6%;
+    bottom: 18%;
+    right: -15%;
     width: 20%;
     height: 4%;
   }
@@ -917,7 +918,7 @@ a {
 @media only screen and (min-width: 950px) {
   .candle {
     top: 8%;
-    left: 46%;
+    left: 56%;
   }
 }
 
@@ -1141,7 +1142,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
   transform-origin: bottom;
-  filter: blur(2px);
+  filter: blur(10px);
   animation: move 5s infinite, flicker 5s infinite;
   box-shadow: 0 -20px 50px 0 #dc8a0c, 0 20px 50px 0 #dc8a0c, inset 2px 0 2px 0 rgba(0, 133, 255, 0.6);
 }
