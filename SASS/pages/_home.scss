@@ -8,17 +8,6 @@
 Texte: Roboto*/
 
 
-
-
-
-$font-family-title: 'shrikhandregular';
-$font-family-text: 'robotoregular';
-
-
-
-
-
-
 body{
     color:#000000
 }
@@ -101,10 +90,9 @@ padding-bottom: 20px;
         box-shadow: $box-shadow-card;
         background: $color-background-header--ultraligth;
         align-items: center;
-        @include devices (small-pc){
-            height: 70px;                       
+        @include devices (pc){                      
             width: 40vw;
-           margin: 25px auto;
+            margin: 25px auto;
         } 
         & p{
             @include devices (small-pc){
