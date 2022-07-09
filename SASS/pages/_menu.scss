@@ -15,22 +15,11 @@
 }
 
 .menu_box{
-    @include devices (small-pc){
+    @include devices (pc){
         display: flex;
         justify-content: space-between;
         .menu_list{
             width: 32%;
-        }
-        .menu_list_item{
-            @include devices (maxi-pc){
-                height: 100px;           
-                .price_check{
-                    height: 100%;
-                    & .price{
-                        align-self: center;
-                    }
-                }
-            }
         }
     }
 }
@@ -51,13 +40,17 @@
         padding-top: 20px;
         justify-content: space-between;
         align-content: center;
+        @include devices (pc) {
+            padding-top: 40px;
+        }
         @include devices (maxi-pc){
             padding-top:50px; 
         }   
         h1{
             font-family: $font-family-title;
-            font-size: 2em;
-            font-weight: 600;
+            font-size: 1.8em;
+            margin-top: 5px;
+            font-weight: 500;
             display: block;
             @include devices (small-pc) {
                 padding-bottom: 25px;
@@ -76,7 +69,7 @@
    
     .dish_type {
         position: relative;
-        font-size: 1.2em;
+        font-size: 1rem;
         font-weight: 300;
         display: block;
         width: 100%;
@@ -86,7 +79,7 @@
         content:'';
         position: absolute;
         width: 45px;
-        height: 4px;
+        height: 3px;
         bottom:-8px;
         display: block;
         background-color: $color-tertiary;
@@ -102,7 +95,6 @@
         display: flex;
         flex-direction: column;
         overflow:hidden;
-
         &_item{
             box-sizing: border-box;
             width: 99.8%;
@@ -117,9 +109,12 @@
             justify-content: space-between;
             margin-bottom: 15px;
             overflow: hidden;
-            box-shadow :1px 1px 8px 1px rgba(0, 0, 0, 0.3);
+            box-shadow :0 1px 6px 0 rgba(100, 99, 99, 0.3);
         }
-            .menu_list_item{
+            .menu_list_item{                
+                @include devices (maxi-pc){
+                    height: 90px;           
+                }
                 animation: slidePage 1s backwards;
                 @for $i from 1 through 15 {
                     &:nth-child(#{$i}){
@@ -136,16 +131,15 @@
                 text-overflow: ellipsis;
                 padding-left:10px;  
                 padding-right: 15px;            
-                width: calc(100% - 60px);
+                width: calc(100% - 45px);
                 box-sizing: border-box;
                 h3{
-                    font-size: 1.1em;
-                
-                    margin:0 0 7px 0;
-                    
+                    font-size: 1.1em;                
+                    margin:0 0 7px 0;                    
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    font-weight: 400;
                 } 
                 p.text{
                     font-size: 0.9em;
@@ -157,23 +151,27 @@
                     margin-right: 15px;
                 }                               
         }
-            
-
+       
         .price_check{                    
             width: 105px;
             margin-right: -60px;                              
             justify-content: space-between;
-            flex-shrink: 0;
-            height: 60px;       
+            flex-shrink: 0; 
+            height: 100%;     
             @include devices(small-pc){
                 width: 125px;
                  margin-right: -80px;  
+            }
+            @include devices(pc){
+                width: 105px;
+                 margin-right: -60px;  
             }
                 
             span.price{
                 font-weight: 400;                    
                 width: 45px;
                 display: block;
+                align-self: center;
             }
 
             .menu_list_item_check{
@@ -183,6 +181,9 @@
                 width: 60px;               
                 @include devices(small-pc){
                     width: 80px;
+                }
+                @include devices(pc){
+                    width: 60px;
                 }
                 i {
                     color: #ffffff;
@@ -198,12 +199,18 @@
     @include devices(small-pc){
     width: calc(90% - 135px);
     }
+    @include devices(pc){
+    width: calc(90% - 120px);
+    }
 }
     
 .menu_list_item:hover .price_check {
     // margin-right: 0;
     animation: slidingShutter 0.3s ease-in-out both;
     @include devices(small-pc){
+        animation: slidingShutterSmallPc 0.3s ease-in-out both;
+   }    
+    @include devices(pc){
         animation: slidingShutter 0.3s ease-in-out both;
    }    
 }
@@ -241,7 +248,7 @@
         margin-right: 0;
     }
 }
-@keyframes slidingShutter--smallpc {
+@keyframes slidingShutterSmallPc {
     0% { margin-right: -80px;
     }
     100% {        

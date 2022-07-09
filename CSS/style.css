@@ -148,6 +148,7 @@ a {
   background-color: #333;
   opacity: 0.99;
   overflow: hidden;
+  animation: loaderAnimation 2s forwards, gradient2 15s ease infinite;
   animation-delay: 3s;
   background-size: 400% 400%;
 }
@@ -1712,24 +1713,13 @@ body {
   object-position: center;
 }
 
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 1300px) {
   .menu_box {
     display: flex;
     justify-content: space-between;
   }
   .menu_box .menu_list {
     width: 32%;
-  }
-}
-@media only screen and (min-width: 950px) and (min-width: 2300px) {
-  .menu_box .menu_list_item {
-    height: 100px;
-  }
-  .menu_box .menu_list_item .price_check {
-    height: 100%;
-  }
-  .menu_box .menu_list_item .price_check .price {
-    align-self: center;
   }
 }
 
@@ -1750,6 +1740,11 @@ body {
   justify-content: space-between;
   align-content: center;
 }
+@media only screen and (min-width: 1300px) {
+  .menu .menu_header_title {
+    padding-top: 40px;
+  }
+}
 @media only screen and (min-width: 2300px) {
   .menu .menu_header_title {
     padding-top: 50px;
@@ -1757,8 +1752,9 @@ body {
 }
 .menu .menu_header_title h1 {
   font-family: "Shrikhand", "Roboto", sans-serif;
-  font-size: 2em;
-  font-weight: 600;
+  font-size: 1.8em;
+  margin-top: 5px;
+  font-weight: 500;
   display: block;
 }
 @media only screen and (min-width: 950px) {
@@ -1841,7 +1837,7 @@ body {
 }
 .menu .dish_type {
   position: relative;
-  font-size: 1.2em;
+  font-size: 1rem;
   font-weight: 300;
   display: block;
   width: 100%;
@@ -1852,7 +1848,7 @@ body {
   content: "";
   position: absolute;
   width: 45px;
-  height: 4px;
+  height: 3px;
   bottom: -8px;
   display: block;
   background-color: #99E2D0;
@@ -1879,10 +1875,15 @@ body {
   justify-content: space-between;
   margin-bottom: 15px;
   overflow: hidden;
-  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 6px 0 rgba(100, 99, 99, 0.3);
 }
 .menu_list .menu_list_item {
   animation: slidePage 1s backwards;
+}
+@media only screen and (min-width: 2300px) {
+  .menu_list .menu_list_item {
+    height: 90px;
+  }
 }
 .menu_list .menu_list_item:nth-child(1) {
   animation-delay: 0.3s;
@@ -1935,7 +1936,7 @@ body {
   text-overflow: ellipsis;
   padding-left: 10px;
   padding-right: 15px;
-  width: calc(100% - 60px);
+  width: calc(100% - 45px);
   box-sizing: border-box;
 }
 .menu_list .item_text h3 {
@@ -1944,6 +1945,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 400;
 }
 .menu_list .item_text p.text {
   font-size: 0.9em;
@@ -1959,7 +1961,7 @@ body {
   margin-right: -60px;
   justify-content: space-between;
   flex-shrink: 0;
-  height: 60px;
+  height: 100%;
 }
 @media only screen and (min-width: 950px) {
   .menu_list .price_check {
@@ -1967,10 +1969,17 @@ body {
     margin-right: -80px;
   }
 }
+@media only screen and (min-width: 1300px) {
+  .menu_list .price_check {
+    width: 105px;
+    margin-right: -60px;
+  }
+}
 .menu_list .price_check span.price {
   font-weight: 400;
   width: 45px;
   display: block;
+  align-self: center;
 }
 .menu_list .price_check .menu_list_item_check {
   flex-grow: 2;
@@ -1981,6 +1990,11 @@ body {
 @media only screen and (min-width: 950px) {
   .menu_list .price_check .menu_list_item_check {
     width: 80px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .menu_list .price_check .menu_list_item_check {
+    width: 60px;
   }
 }
 .menu_list .price_check .menu_list_item_check i {
@@ -1996,11 +2010,21 @@ body {
     width: calc(90% - 135px);
   }
 }
+@media only screen and (min-width: 1300px) {
+  .menu_list_item:hover .item_text {
+    width: calc(90% - 120px);
+  }
+}
 
 .menu_list_item:hover .price_check {
   animation: slidingShutter 0.3s ease-in-out both;
 }
 @media only screen and (min-width: 950px) {
+  .menu_list_item:hover .price_check {
+    animation: slidingShutterSmallPc 0.3s ease-in-out both;
+  }
+}
+@media only screen and (min-width: 1300px) {
   .menu_list_item:hover .price_check {
     animation: slidingShutter 0.3s ease-in-out both;
   }
@@ -2040,7 +2064,7 @@ body {
     margin-right: 0;
   }
 }
-@keyframes slidingShutter--smallpc {
+@keyframes slidingShutterSmallPc {
   0% {
     margin-right: -80px;
   }
