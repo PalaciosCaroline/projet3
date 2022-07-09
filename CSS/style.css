@@ -191,6 +191,7 @@ a {
 .loader_page .loader_logo span {
   display: inline-block;
   text-shadow: 0 0 0 #ffffff;
+  animation: smoky 2s 2s both, animate 2s 2s both;
 }
 .loader_page .loader_logo span:nth-child(even) {
   animation-name: smoky-mirror, animate;
@@ -1168,12 +1169,17 @@ a {
 }
 @media only screen and (min-width: 1300px) {
   .wax {
-    top: 60px;
+    top: 30px;
   }
 }
 @media only screen and (min-width: 1800px) {
   .wax {
     height: 160%;
+  }
+}
+@media only screen and (min-width: 2300px) {
+  .wax {
+    height: 180%;
   }
 }
 
@@ -1229,19 +1235,6 @@ a {
     opacity: 0.95;
   }
 }
-/* ==== CANDLE START ==== */
-.candle__wrapper {
-  width: 1rem;
-  height: 8rem;
-  position: absolute;
-  top: 10rem;
-  left: 50%;
-  clip-path: polygon(100% 100%, 0 100%, 0 15%, 5% 12%, 10% 10%, 14% 11%, 15% 10%, 16% 9%, 18% 8%, 20% 7%, 56% 3%, 61% 3%, 76% 3%, 81% 5%, 89% 4%, 98% 8%);
-  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 10%, rgb(255, 222, 0) 25%, rgb(255, 172, 0) 40%, rgb(255, 168, 24) 50%, rgb(0, 0, 0) 75%);
-  filter: blur(10px);
-}
-
-/* ==== CANDLE END ==== */
 /* ===== FIRE START===== */
 .fire__wrapper {
   width: 0.1rem;
