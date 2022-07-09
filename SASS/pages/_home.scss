@@ -84,24 +84,27 @@ padding-bottom: 20px;
     & .card{
         height: 65px;
         width: 100%;
+        margin: 25px auto;
         margin-left: 7px;
         margin-bottom: 25px;    
         border-radius: 15px 15px 15px 15px; 
         box-shadow: $box-shadow-card;
         background: $color-background-header--ultraligth;
         align-items: center;
-        @include devices (pc){                      
-            width: 40vw;
+        @include devices (small-pc){                      
+            width: 70%;
             margin: 25px auto;
         } 
-        & p{
+        @include devices (pc){                      
+            width: 40vw;
+        } 
+        & .h3{
             @include devices (small-pc){
                margin-left: 20px;
             }
         }        
         
         &:hover{
-            @include cardHover;
             background-color: mix(#fff,$color-primary, 87%);
             i{
                 color: $color-primary
