@@ -1,4 +1,4 @@
-@mixin button{    
+@mixin button--gradient{    
     background: $bg-btn; 
     color: #FFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -9,12 +9,12 @@
     display: block;
     margin: auto;
     margin-top: 30px;    
-    &:hover {
+    &:hover,
+    &:active {
         transform: translateY(-1px);
         opacity:0.90;
         background: $bg-btn;
         box-shadow: 0 0 50px -20px rgba(255, 255, 255,0.5) inset, 1px 3px 3px 1px #0000, 0px 4px 4px rgba(0, 0, 0, 0.8);        
-        // background-color:linear-gradient(to top, rgba(147,86,220,0.8),rgba(255,121,218,0.8);
     }  
     @include devices (maxi-pc){
         padding: 30px 120px;
@@ -24,15 +24,15 @@
 
 
  @mixin btn--heart{
-    border:none;
-    position: relative;
-    background-color: white;    
-    margin-right: 15px;
-    bottom: 3px;
-    height: 40px;
-    width: 55px;
-    @include devices (small-pc){
-        margin-right: 30px;
+        border:none;
+        position: relative;
+        background-color: white;    
+        margin-right: 15px;
+        bottom: 3px;
+        height: 40px;
+        width: 55px;
+        @include devices (small-pc){
+            margin-right: 30px;
     }
     .empty{                    
         position: absolute;
@@ -41,12 +41,12 @@
         left:25%;            
     }
     .full{
-    display: block;       
-    position: absolute;
-    z-index:99;
-    top:22%;
-    left:25%;            
-    transform: scale(0); 
+        display: block;       
+        position: absolute;
+        z-index:99;
+        top:22%;
+        left:25%;            
+        transform: scale(0); 
         .main-stop {
             stop-color: $color-primary;
         }
@@ -54,7 +54,8 @@
             stop-color:$color-secondary;
         }                   
     }
-    &:hover {         
+    &:hover,           
+    &:active {         
         .full {            
             animation: heartFilling 0.2s forwards;
             transform-origin:12px 12px;
@@ -72,10 +73,9 @@
         100%{transform: scale(1);}
     }
     
-
-     @keyframes disappearanceCoeur {
-    0%{opacity:0.9;}
-    100%{opacity:0;}
+    @keyframes disappearanceCoeur {
+        0%{opacity:0.9;}
+        100%{opacity:0;}
     }
 }
 

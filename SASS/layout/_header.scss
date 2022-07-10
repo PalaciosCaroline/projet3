@@ -8,7 +8,7 @@
      } 
      img{
          margin:auto;
-         width: 170px;
+         width: 160px;
          @include devices(small-pc){
              width: 220px;
          } 

@@ -2,7 +2,7 @@
 
 .menu_streamer_img {
     overflow: hidden;
-    height: 260px;   
+    height: 270px;   
     @include devices (maxi-pc){
         height: 350px;
     }
@@ -37,7 +37,8 @@
     .menu_header_title{   
         border-radius: 50px 50px 0 0;
         display: flex;
-        padding-top: 20px;
+        padding-top: 30px;
+        margin-bottom: 10px;
         justify-content: space-between;
         align-content: center;
         @include devices (pc) {
@@ -48,7 +49,7 @@
         }   
         h1{
             font-family: $font-family-title;
-            font-size: 1.8em;
+            font-size: 1.7em;
             margin-top: 5px;
             font-weight: 500;
             display: block;
@@ -73,12 +74,12 @@
         font-weight: 300;
         display: block;
         width: 100%;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        margin-bottom: 22px;
+        margin-top: 22px;
         &::after{
         content:'';
         position: absolute;
-        width: 45px;
+        width: 40px;
         height: 3px;
         bottom:-8px;
         display: block;
@@ -104,7 +105,7 @@
             flex-wrap: nowrap;
             background-color: #fff;
             border-radius: 15px;
-            height: 60px;
+            height: 69px;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 15px;
@@ -194,7 +195,8 @@
     }
 }   
 
-.menu_list_item:hover .item_text{
+.menu_list_item:hover .item_text,
+.menu_list_item:active .item_text{
     width: calc(95% - 120px);
     @include devices(small-pc){
     width: calc(90% - 135px);
@@ -204,7 +206,8 @@
     }
 }
     
-.menu_list_item:hover .price_check {
+.menu_list_item:hover .price_check,
+.menu_list_item:active .price_check {
     // margin-right: 0;
     animation: slidingShutter 0.3s ease-in-out both;
     @include devices(small-pc){
@@ -214,7 +217,8 @@
         animation: slidingShutter 0.3s ease-in-out both;
    }    
 }
-.menu_list_item:hover i{          
+.menu_list_item:hover i,          
+.menu_list_item:active i{          
     animation: iconRotate 0.3s  0.15s linear both;
 }           
 
@@ -257,6 +261,6 @@
 }
     
 .order{
-    @include button;
+    @include button--gradient;
     padding: 16px 50px;
 }
