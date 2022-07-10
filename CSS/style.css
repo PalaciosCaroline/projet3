@@ -378,7 +378,7 @@ a {
 .loader_page #cooking #area #table2 {
   position: absolute;
   z-index: 10;
-  bottom: 3%;
+  bottom: 4%;
   right: -15%;
   width: 130%;
   height: 22px;
@@ -397,8 +397,8 @@ a {
 }
 @media only screen and (max-width: 500px) {
   .loader_page #cooking #area #table2 {
-    height: 17px;
-    bottom: 4.7%;
+    height: 19px;
+    bottom: 6.5%;
     right: -13%;
   }
 }
@@ -428,6 +428,7 @@ a {
 }
 .loader_page #dot1, .loader_page #dot2, .loader_page #dot3, .loader_page #dot4, .loader_page #dot5, .loader_page #dot6, .loader_page #dot7, .loader_page #dot8, .loader_page #dot9, .loader_page #dot10 {
   position: absolute;
+  z-index: 50;
   width: 10px;
   height: 10px;
   border-radius: 50px 50px;
@@ -472,9 +473,10 @@ a {
 }
 .loader_page #base1, .loader_page #base2, .loader_page #base3, .loader_page #base4, .loader_page #base5 {
   position: absolute;
+  z-index: 50;
   top: 30px;
   left: 5px;
-  width: 1px;
+  width: 3px;
   height: 10px;
   background: #99E2D0;
   animation: flex 1.5s linear infinite;
@@ -1219,7 +1221,7 @@ a {
   width: 20px;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
   background: white;
   border-top-left-radius: 500%;
