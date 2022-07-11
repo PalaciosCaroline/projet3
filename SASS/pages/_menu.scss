@@ -76,13 +76,13 @@
         margin-bottom: 22px;
         margin-top: 22px;
         &::after{
-        content:'';
-        position: absolute;
-        width: 40px;
-        height: 3px;
-        bottom:-8px;
-        display: block;
-        background-color: $color-tertiary;
+            content:'';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            bottom:-8px;
+            display: block;
+            background-color: $color-tertiary;
         }
         .menu_list .dish_type:nth-child(1){
             animation: slidePage 0.1s 0.2 backwards;
@@ -109,44 +109,43 @@
             overflow: hidden;
             box-shadow :0 1px 6px 0 rgba(100, 99, 99, 0.3);
         }
-            .menu_list_item{                
-                @include devices (maxi-pc){
-                    height: 90px;           
-                }
-                animation: slidePage 1s backwards;
-                @for $i from 1 through 15 {
-                    &:nth-child(#{$i}){
-                        animation-delay: (0.15s * $i) + 0.15s ;
-                    }
+        & .menu_list_item{                
+            @include devices (maxi-pc){
+                height: 90px;           
+            }
+            animation: slidePage 1s backwards;
+            @for $i from 1 through 15 {
+                &:nth-child(#{$i}){
+                    animation-delay: (0.15s * $i) + 0.15s ;
                 }
             }
-        &   .item_text{
+        }
+        & .item_text{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-left:10px;  
+            padding-right: 15px;            
+            width: calc(100% - 45px);
+            box-sizing: border-box;
+            h3{
+                font-size: 1.1em;                
+                margin:0 0 7px 0;                    
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                padding-left:10px;  
-                padding-right: 15px;            
-                width: calc(100% - 45px);
-                box-sizing: border-box;
-                h3{
-                    font-size: 1.1em;                
-                    margin:0 0 7px 0;                    
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    font-weight: 400;
-                } 
-                p.text{
-                    font-size: 0.9em;
-                    font-weight: 300;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    margin:0;  
-                    margin-right: 15px;
-                }                               
+                font-weight: 400;
+            } 
+            p.text{
+                font-size: 0.9em;
+                font-weight: 300;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin:0;  
+                margin-right: 15px;
+            }                               
         }
-       
         .price_check{                    
             width: 105px;
             margin-right: -60px;                              
@@ -155,20 +154,18 @@
             height: 100%;     
             @include devices(small-pc){
                 width: 125px;
-                 margin-right: -80px;  
+                margin-right: -80px;  
             }
             @include devices(pc){
                 width: 105px;
-                 margin-right: -60px;  
-            }
-                
+                margin-right: -60px;  
+            }         
             span.price{
                 font-weight: 400;                    
                 width: 45px;
                 display: block;
                 align-self: center;
             }
-
             .menu_list_item_check{
                 flex-grow: 2;   
                 background-color: $color-tertiary;
@@ -193,10 +190,10 @@
 .menu_list_item:active .item_text{
     width: calc(95% - 120px);
     @include devices(small-pc){
-    width: calc(90% - 135px);
+        width: calc(90% - 135px);
     }
     @include devices(pc){
-    width: calc(90% - 120px);
+        width: calc(90% - 120px);
     }
 }
     
