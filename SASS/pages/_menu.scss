@@ -254,6 +254,6 @@
 }
     
 .order{
-    @include button--gradient;
+    @include btn--pill;
     padding: 16px 50px;
 }

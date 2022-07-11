@@ -1399,15 +1399,6 @@ ol, ul {
   }
 }
 
-.flex {
-  display: flex;
-}
-
-.center {
-  justify-content: center;
-  align-items: center;
-}
-
 .form_location {
   padding-right: 5.5%;
   padding-left: 5.5%;
@@ -1630,7 +1621,7 @@ ol, ul {
 .restaurant_card_box_text header p {
   font-size: 1.1rem;
 }
-.restaurant .btn--heart {
+.restaurant_card_box_text .btn--heart {
   border: none;
   position: relative;
   background-color: white;
@@ -1640,11 +1631,11 @@ ol, ul {
   width: 55px;
 }
 @media only screen and (min-width: 950px) {
-  .restaurant .btn--heart {
+  .restaurant_card_box_text .btn--heart {
     margin-right: 30px;
   }
 }
-.restaurant .btn--heart .empty {
+.restaurant_card_box_text .btn--heart .empty {
   position: absolute;
   z-index: 1;
   top: 22%;
@@ -1652,7 +1643,7 @@ ol, ul {
   height: 24px;
   width: 24px;
 }
-.restaurant .btn--heart .full {
+.restaurant_card_box_text .btn--heart .full {
   display: block;
   position: absolute;
   z-index: 99;
@@ -1662,17 +1653,17 @@ ol, ul {
   width: 24px;
   transform: scale(0);
 }
-.restaurant .btn--heart .full .main-stop {
+.restaurant_card_box_text .btn--heart .full .main-stop {
   stop-color: #9356DC;
 }
-.restaurant .btn--heart .full .alt-stop {
+.restaurant_card_box_text .btn--heart .full .alt-stop {
   stop-color: #FF79DA;
 }
-.restaurant .btn--heart:hover .full, .restaurant .btn--heart:active .full {
+.restaurant_card_box_text .btn--heart:hover .full, .restaurant_card_box_text .btn--heart:active .full {
   animation: heartFilling 0.2s forwards;
   transform-origin: 12px 12px;
 }
-.restaurant .btn--heart:hover .empty, .restaurant .btn--heart:active .empty {
+.restaurant_card_box_text .btn--heart:hover .empty, .restaurant_card_box_text .btn--heart:active .empty {
   animation: disappearanceCoeur 0.8s 0.1s forwards;
 }
 @keyframes heartFilling {

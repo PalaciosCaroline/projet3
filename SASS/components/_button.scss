@@ -1,4 +1,4 @@
-@mixin button--gradient{    
+@mixin btn--pill{    
     background: $bg-btn; 
     color: #FFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -22,42 +22,41 @@
     }  
 }
 
-
- @mixin btn--heart{
-        border:none;
-        position: relative;
-        background-color: white;    
-        margin-right: 15px;
-        bottom: 3px;
-        height: 40px;
-        width: 55px;
-        @include devices (small-pc){
-            margin-right: 30px;
+@mixin btn--heart{
+    border:none;
+    position: relative;
+    background-color: white;    
+    margin-right: 15px;
+    bottom: 3px;
+    height: 40px;
+    width: 55px;
+    @include devices (small-pc){
+        margin-right: 30px;
+    }
+    .empty{                    
+        position: absolute;
+        z-index:1;
+        top:22%;
+        left:25%;     
+        height: 24px;   
+        width: 24px;    
+    }
+    .full{
+        display: block;       
+        position: absolute;
+        z-index:99;
+        top:22%;
+        left:25%;   
+        height: 24px;   
+        width: 24px;          
+        transform: scale(0); 
+        .main-stop {
+            stop-color: $color-primary;
         }
-        .empty{                    
-            position: absolute;
-            z-index:1;
-            top:22%;
-            left:25%;     
-            height: 24px;   
-            width: 24px;    
-        }
-        .full{
-            display: block;       
-            position: absolute;
-            z-index:99;
-            top:22%;
-            left:25%;   
-            height: 24px;   
-            width: 24px;          
-            transform: scale(0); 
-            .main-stop {
-                stop-color: $color-primary;
-            }
-            .alt-stop {
-                stop-color:$color-secondary;
-            }                   
-        }
+        .alt-stop {
+            stop-color:$color-secondary;
+        }                   
+    }
     &:hover,           
     &:active {         
         .full {            
