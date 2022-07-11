@@ -148,20 +148,9 @@ a {
   background-color: #333;
   opacity: 0.99;
   overflow: hidden;
-  animation: loaderAnimation 2s forwards, gradient2 15s ease infinite;
-  animation-delay: 3s;
+  animation: loaderAnimation 1.5s forwards;
+  animation-delay: 2s;
   background-size: 400% 400%;
-}
-@keyframes gradient2 {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 .loader_page .loader_logo {
   position: relative;
@@ -180,7 +169,7 @@ a {
     overflow: visible;
     opacity: 0.98;
   }
-  95% {
+  90% {
     opacity: 0.8;
   }
   100% {
@@ -192,12 +181,12 @@ a {
 .loader_page .loader_logo span {
   display: inline-block;
   text-shadow: 0 0 0 #ffffff;
-  animation: smoky 2s 2s both, animate 2s 2s both;
+  animation: smokeLetter 2s 2s both;
 }
-.loader_page .loader_logo span:nth-child(even) {
-  animation-name: smoky-mirror, animate;
+.loader_page .loader_logo span:nth-child(1n+0) {
+  animation-name: smokeLetter-mirror, smokeLetter;
 }
-@keyframes animate {
+@keyframes smokeLetter {
   0% {
     transform: rotate(0deg) translateY(0px);
     opacity: 1;
@@ -209,17 +198,7 @@ a {
     color: white;
   }
 }
-@keyframes smoky {
-  60% {
-    text-shadow: 0 0 40px white;
-  }
-  to {
-    transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
-    text-shadow: 0 0 20px white;
-    opacity: 0;
-  }
-}
-@keyframes smoky-mirror {
+@keyframes smokeLetter-mirror {
   60% {
     text-shadow: 0 0 40px white;
   }
@@ -230,25 +209,25 @@ a {
   }
 }
 .loader_page span:nth-child(1) {
-  animation-delay: 1.5s;
+  animation-delay: 1.35s;
 }
 .loader_page span:nth-child(2) {
-  animation-delay: 1.7s;
+  animation-delay: 1.5s;
 }
 .loader_page span:nth-child(3) {
-  animation-delay: 1.9s;
+  animation-delay: 1.65s;
 }
 .loader_page span:nth-child(4) {
-  animation-delay: 2.1s;
+  animation-delay: 1.8s;
 }
 .loader_page span:nth-child(5) {
-  animation-delay: 2.3s;
+  animation-delay: 1.95s;
 }
 .loader_page span:nth-child(6) {
-  animation-delay: 2.5s;
+  animation-delay: 2.1s;
 }
 .loader_page span:nth-child(7) {
-  animation-delay: 2.7s;
+  animation-delay: 2.25s;
 }
 .loader_page #cooking {
   position: relative;
