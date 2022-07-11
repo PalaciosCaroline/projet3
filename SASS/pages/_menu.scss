@@ -33,7 +33,6 @@
     border-radius: 25px 25px 0 0;
     padding-bottom: 60px;
     @include padding-box;
-    
     .menu_header_title{   
         border-radius: 50px 50px 0 0;
         display: flex;
@@ -41,6 +40,9 @@
         margin-bottom: 10px;
         justify-content: space-between;
         align-content: center;
+        @include devices (small-pc) {
+            padding-bottom: 25px;
+        }
         @include devices (pc) {
             padding-top: 40px;
         }
@@ -53,9 +55,6 @@
             margin-top: 5px;
             font-weight: 500;
             display: block;
-            @include devices (small-pc) {
-                padding-bottom: 25px;
-            }
             @include devices (maxi-pc){
                font-size: 2.5rem;  
             }   
@@ -87,9 +86,7 @@
         }
         .menu_list .dish_type:nth-child(1){
             animation: slidePage 0.1s 0.2 backwards;
-        }
-        
-
+        } 
     } 
         
     &_list{
@@ -120,12 +117,9 @@
                 @for $i from 1 through 15 {
                     &:nth-child(#{$i}){
                         animation-delay: (0.15s * $i) + 0.15s ;
-    
                     }
                 }
             }
-        
-        
         &   .item_text{
                 white-space: nowrap;
                 overflow: hidden;
@@ -208,7 +202,6 @@
     
 .menu_list_item:hover .price_check,
 .menu_list_item:active .price_check {
-    // margin-right: 0;
     animation: slidingShutter 0.3s ease-in-out both;
     @include devices(small-pc){
         animation: slidingShutterSmallPc 0.3s ease-in-out both;
@@ -217,12 +210,12 @@
         animation: slidingShutter 0.3s ease-in-out both;
    }    
 }
+
 .menu_list_item:hover i,          
 .menu_list_item:active i{          
     animation: iconRotate 0.3s  0.15s linear both;
 }           
-
-        
+       
 @keyframes slidePage {
     0%{
         opacity: 0;
