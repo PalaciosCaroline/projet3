@@ -9,13 +9,14 @@ body {
 a {
   color: #000;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .logo {
   font-family: "Shrikhand";
 }
 
-ol, ul {
+ul {
   list-style: none;
 }
 
@@ -149,7 +150,6 @@ ol, ul {
   background-color: #333;
   opacity: 0.99;
   overflow: hidden;
-  animation: loaderAnimation 1.5s forwards;
   animation-delay: 2s;
   background-size: 400% 400%;
   /* ===== FIRE START===== */
@@ -1133,7 +1133,7 @@ ol, ul {
   position: absolute;
   top: 1%;
   left: 0;
-  background: white;
+  filter: blur(5px);
   border-top-left-radius: 500%;
   border-bottom-left-radius: 50px;
   border-top-right-radius: 500%;
@@ -1142,7 +1142,6 @@ ol, ul {
   box-shadow: 0 0px 0px 3px white, 0 -20px 1px 4px white, 0 -25px 2px 3px gold, 0 -30px 5px 4px #ff6a00, 0 0px 150px 10px #ff6a00, 0 -10px 2px 4px white, 0 -5px 3px 3px white;
   -webkit-animation: flame-up 4s infinite;
   animation: flame-up 4s infinite;
-  background: rgb(0, 0, 255);
   background: linear-gradient(0deg, rgba(0, 0, 255, 0.7427345938) 4%, rgba(255, 184, 0, 0.9080007003) 14%, rgb(255, 255, 255) 38%);
 }
 .loader_page .flame .shadows {
@@ -1180,28 +1179,6 @@ ol, ul {
   border-top-right-radius: 10px;
   box-shadow: inset 0 7px 12px -2px #fbf348, inset 0 9px 57px -3px rgb(255, 168, 24), inset 0 -5px 8px 2px black, 0 0 3px 0px #ff6a00;
 }
-@-webkit-keyframes move {
-  0% {
-    transform: skewX(2deg) skewY(3deg);
-  }
-  50% {
-    transform: skewX(-2deg) skewY(0deg);
-  }
-  100% {
-    transform: skewX(2deg) skewY(3deg);
-  }
-}
-@keyframes move {
-  0% {
-    transform: skewX(2deg) skewY(5deg);
-  }
-  50% {
-    transform: skewX(-2deg) skewY(0deg);
-  }
-  100% {
-    transform: skewX(2deg) skewY(5deg);
-  }
-}
 @-webkit-keyframes move-left {
   50% {
     transform: skewX(3deg);
@@ -1238,21 +1215,6 @@ ol, ul {
   position: absolute;
   left: 50%;
   top: 11rem;
-}
-.loader_page .fire__top {
-  height: 1rem;
-  width: 0.3rem;
-  background: rgb(0, 0, 255);
-  background: linear-gradient(0deg, rgba(0, 0, 255, 0.7427345938) 4%, rgba(255, 184, 0, 0.9080007003) 14%, rgb(255, 255, 255) 38%);
-  border-radius: 50% 50% 50% 50%/65% 65% 35% 35%;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  transform-origin: bottom;
-  filter: blur(10px);
-  animation: move 5s infinite, flicker 5s infinite;
-  box-shadow: 0 -20px 50px 0 #dc8a0c, 0 20px 50px 0 #dc8a0c, inset 2px 0 2px 0 rgba(0, 133, 255, 0.6);
 }
 .loader_page .fire__glow {
   width: 80rem;
@@ -1303,78 +1265,6 @@ ol, ul {
   }
   100% {
     transform: translateX(-50%) rotate(0deg);
-  }
-}
-@keyframes flicker {
-  0% {
-    width: 8rem;
-    height: 25rem;
-  }
-  40% {
-    width: 7rem;
-    height: 27rem;
-  }
-  50% {
-    width: 8rem;
-    height: 25rem;
-  }
-  80% {
-    width: 7.5rem;
-    height: 26rem;
-  }
-  82% {
-    width: 7.8rem;
-    height: 24rem;
-  }
-  84% {
-    width: 7.5rem;
-    height: 26rem;
-  }
-  86% {
-    width: 7.8rem;
-    height: 24rem;
-  }
-  88% {
-    width: 7.5rem;
-    height: 26rem;
-  }
-  90% {
-    width: 8rem;
-    height: 25.5rem;
-  }
-  92% {
-    width: 8.2rem;
-    height: 25.3rem;
-  }
-  94% {
-    width: 8.4rem;
-    height: 25.1rem;
-  }
-  96% {
-    width: 8rem;
-    height: 26rem;
-  }
-  98% {
-    width: 7.8rem;
-    height: 26rem;
-  }
-  100% {
-    width: 8rem;
-    height: 24rem;
-  }
-}
-@keyframes radius {
-  0% {
-    border-radius: 50% 50% 50% 50%/60% 65% 40% 35%;
-  }
-  25% {
-    border-radius: 45% 55% 55% 45%/65% 65% 35% 35%;
-  }
-  75% {
-    border-radius: 48% 52% 53% 47%/60% 65% 40% 35%;
-  }
-  100% {
-    border-radius: 50% 50% 50% 50%/55% 65% 45% 35%;
   }
 }
 
@@ -1446,7 +1336,6 @@ ol, ul {
 .main_header .explore:hover, .main_header .explore:active {
   transform: translateY(-1px);
   opacity: 0.9;
-  background: linear-gradient(to top, #9356dc 10%, #ff79da 80%);
   box-shadow: 0 0 50px -20px rgba(255, 255, 255, 0.5) inset, 1px 3px 3px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
 @media only screen and (min-width: 2300px) {
@@ -2095,7 +1984,6 @@ ol, ul {
 .order:hover, .order:active {
   transform: translateY(-1px);
   opacity: 0.9;
-  background: linear-gradient(to top, #9356dc 10%, #ff79da 80%);
   box-shadow: 0 0 50px -20px rgba(255, 255, 255, 0.5) inset, 1px 3px 3px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0.8);
 }
 @media only screen and (min-width: 2300px) {

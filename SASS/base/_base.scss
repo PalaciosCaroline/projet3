@@ -7,13 +7,14 @@ body{
 a{
     color: #000;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .logo{
     font-family: 'Shrikhand';
 }
 
-ol,ul {
+ul {
     list-style: none;
 }
 
@@ -22,8 +23,8 @@ ol,ul {
 }
 
 .center {
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 /*alternative text to icons for accessibility*/
