@@ -1,19 +1,14 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass mixins.
-// -----------------------------------------------------------------------------
-
 @mixin devices ($breakpoint) { //the name of the mixin is devices
-  
-    @if $breakpoint == tablet {    
-    @media only screen and (max-width: 680px) {
-      @content;
-    }
-  } 
   @if $breakpoint == mobile {
     @media only screen and (max-width: 500px) {
       @content;
     }
   }
+  @if $breakpoint == tablet {    
+    @media only screen and (max-width: 680px) {
+      @content;
+    }
+  } 
   @if $breakpoint == small-pc {
     @media only screen and (min-width: 950px) {
       @content;

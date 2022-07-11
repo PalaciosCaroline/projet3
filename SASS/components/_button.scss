@@ -33,31 +33,31 @@
         width: 55px;
         @include devices (small-pc){
             margin-right: 30px;
-    }
-    .empty{                    
-        position: absolute;
-        z-index:1;
-        top:22%;
-        left:25%;     
-        height: 24px;   
-        width: 24px;    
-    }
-    .full{
-        display: block;       
-        position: absolute;
-        z-index:99;
-        top:22%;
-        left:25%;   
-        height: 24px;   
-        width: 24px;          
-        transform: scale(0); 
-        .main-stop {
-            stop-color: $color-primary;
         }
-        .alt-stop {
-            stop-color:$color-secondary;
-        }                   
-    }
+        .empty{                    
+            position: absolute;
+            z-index:1;
+            top:22%;
+            left:25%;     
+            height: 24px;   
+            width: 24px;    
+        }
+        .full{
+            display: block;       
+            position: absolute;
+            z-index:99;
+            top:22%;
+            left:25%;   
+            height: 24px;   
+            width: 24px;          
+            transform: scale(0); 
+            .main-stop {
+                stop-color: $color-primary;
+            }
+            .alt-stop {
+                stop-color:$color-secondary;
+            }                   
+        }
     &:hover,           
     &:active {         
         .full {            
@@ -67,23 +67,19 @@
         .empty {
             animation : disappearanceCoeur 0.8s 0.1s forwards;
         }            
-    }
-    
+    }  
     @keyframes heartFilling {
         0%{transform: scale(0.1);}
         20%{transform: scale(0.3);}
         50%{transform: scale(0.5);}
         70%{transform: scale(0.7);}
         100%{transform: scale(1);}
-    }
-    
+    }   
     @keyframes disappearanceCoeur {
         0%{opacity:0.9;}
         100%{opacity:0;}
     }
 }
-
-
 
 //en cas de remise des icons
     //  i{
