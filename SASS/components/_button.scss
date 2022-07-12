@@ -12,8 +12,8 @@
     &:hover,
     &:active {
         transform: translateY(-1px);
-        opacity:0.90;
-        box-shadow: 0 0 50px -20px rgba(255, 255, 255,0.5) inset, 1px 3px 3px 1px #0000, 0px 4px 4px rgba(0, 0, 0, 0.8);        
+        opacity:0.95;
+        box-shadow: 0 0 50px -20px rgba(255,250,250,0.8) inset, 1px 3px 3px 1px #0000, 0px 4px 4px rgba(0, 0, 0, 0.8);        
     }  
     @include devices (maxi-pc){
         padding: 30px 120px;
