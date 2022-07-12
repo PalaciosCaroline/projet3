@@ -31,7 +31,7 @@
     background-color:$color-background-header--menu;
     margin-top: -3rem;
     border-radius: 25px 25px 0 0;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
     @include padding-box;
     .menu_header_title{
         border-radius: 50px 50px 0 0;
@@ -132,7 +132,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                font-weight: 400;
+                font-weight: 500;
             }
             p.text{
                 font-size: 0.9em;
@@ -178,6 +178,7 @@
                 i {
                     color: #ffffff;
                     font-size: 1.2em;
+                    font-weight: 900;
                 }
             }
         }
