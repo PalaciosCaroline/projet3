@@ -8,7 +8,7 @@
   background-color: #333;
   opacity: 0.99;
   overflow: hidden;
-  //animation: loaderAnimation 1.5s forwards;
+  animation: loaderAnimation 1.5s forwards;
   animation-delay: 2s;    
   background-size: 400% 400%;
     
@@ -942,6 +942,17 @@
     left:10px;
     z-index: -1;
   }
+
+  @-webkit-keyframes blink {
+    50% {
+      opacity: 0.95;
+    }
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0.95;
+    }
+  }
       
   .wick {
     position: absolute;
@@ -951,7 +962,9 @@
     left: 50%;
     transform: translateX(-30%) skewX(1deg);
     border-radius: 10%;
+    filter:blur(2px);
   }
+
   .wick:before {
     content: "";
     position: absolute;
@@ -960,7 +973,9 @@
     height: 35px;
     box-shadow: 0 -14px 10px 8px white, 0 -10px 10px 8px rgba(255, 215, 0, 0.7),
       0 -3px 10px 8px rgba(255, 106, 0, 0.7);
+    filter:blur(5px);
   }
+
   .wick:after {
     content: "";
     position: absolute;
@@ -979,9 +994,29 @@
     top:-120px;
     left:50%;
     position: absolute;
-    -webkit-animation: move 3s infinite, move-left 3s infinite;
+    -webkit-animation: moveFlame 3s infinite, move-left 3s infinite;
     animation: move 3s infinite, move-left 3s infinite;
     transform-origin: 50% 90%;       
+  }
+
+  @keyframes moveFlame {
+    0% {transform: translateX(-50%) rotate(1deg);}
+    10% {transform: translateX(-50%) rotate(0deg);}
+    30% {transform: translateX(-50%) rotate(5deg) scale(1.1);}
+    70% {transform: translateX(-50%) rotate(0deg);}
+    80% {transform: translateX(-50%) rotate(-11deg) scale(1.2);}
+    100% {transform: translateX(-50%) rotate(0deg);}
+  }
+
+  @-webkit-keyframes move-left {
+    50% {
+      transform: skewX(3deg);
+    }
+  }
+  @keyframes move-left {
+    50% {
+      transform: skewX(3deg);
+    }
   }
 
   .flame .top {
@@ -1007,6 +1042,21 @@
       rgba(255, 184, 0, 0.908000700280112) 14%,
       rgba(255, 255, 255, 1) 38%
     );
+  }
+
+  @-webkit-keyframes flame-up {
+    50% {
+      box-shadow: 0 0px 0px 3px white, 0 -38px 1px 2px white, 0 -41px 2px 3px gold,
+        0 -10px 2px 4px #ff6a00, 0 0px 10px 2px #ff6a00, 0 -10px 2px 4px white,
+        0 -5px 3px 3px white;
+    }
+  }
+  @keyframes flame-up {
+    50% {
+      box-shadow: 0 0px 0px 3px white, 0 -38px 1px 2px white, 0 -41px 2px 3px gold,
+        0 -10px 2px 1px #ff6a00, 0 0px 10px 2px #ff6a00, 0 -10px 2px 4px white,
+        0 -5px 3px 3px white;
+    }
   }
 
   .flame .shadows {
@@ -1066,51 +1116,8 @@
     inset 0 9px 57px -3px  rgba(255, 168, 24, 1), inset 0 -5px 8px 2px black,
     0 0 3px 0px #ff6a00;
   }
-  
-  @-webkit-keyframes move-left {
-    50% {
-      transform: skewX(3deg);
-    }
-  }
-  @keyframes move-left {
-    50% {
-      transform: skewX(3deg);
-    }
-  }
-  @-webkit-keyframes flame-up {
-    50% {
-      box-shadow: 0 0px 0px 3px white, 0 -38px 1px 2px white, 0 -41px 2px 3px gold,
-        0 -10px 2px 4px #ff6a00, 0 0px 10px 2px #ff6a00, 0 -10px 2px 4px white,
-        0 -5px 3px 3px white;
-    }
-  }
-  @keyframes flame-up {
-    50% {
-      box-shadow: 0 0px 0px 3px white, 0 -38px 1px 2px white, 0 -41px 2px 3px gold,
-        0 -10px 2px 1px #ff6a00, 0 0px 10px 2px #ff6a00, 0 -10px 2px 4px white,
-        0 -5px 3px 3px white;
-    }
-  }
-  @-webkit-keyframes blink {
-    50% {
-      opacity: 0.95;
-    }
-  }
-  @keyframes blink {
-    50% {
-      opacity: 0.95;
-    }
-  }
 
-  /* ===== FIRE START===== */
-  .fire__wrapper {
-    width: 0.1rem;
-    height: 0.13rem;
-    position: absolute;
-    left: 50%;
-    top: 11rem;
-  }
-
+  //halo of light
   .fire__glow {
     width: 80rem;
     height: 50rem;
@@ -1126,10 +1133,10 @@
     );
     transform: scale(2);
     filter: blur(10rem);
-    animation: glowBlink2 5s infinite;
+    animation: glowBlink 5s infinite;
   }
 
-  @keyframes glowBlink2 {
+  @keyframes glowBlink {
     70% {
       opacity: 0.9;
     }
@@ -1148,15 +1155,6 @@
     96% {
       opacity: 0.9;
     }
-  }
-
-  @keyframes move {
-    0% {transform: translateX(-50%) rotate(1deg);}
-    10% {transform: translateX(-50%) rotate(0deg);}
-    30% {transform: translateX(-50%) rotate(5deg) scale(1.1);}
-    70% {transform: translateX(-50%) rotate(0deg);}
-    80% {transform: translateX(-50%) rotate(-11deg) scale(1.2);}
-    100% {transform: translateX(-50%) rotate(0deg);}
   }
 }
 
