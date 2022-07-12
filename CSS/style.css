@@ -1548,7 +1548,7 @@ ul {
   transform-origin: 12px 12px;
 }
 .restaurant_card_box_text .btn--heart:hover .empty, .restaurant_card_box_text .btn--heart:active .empty {
-  animation: disappearanceCoeur 0.8s 0.1s forwards;
+  animation: disappearanceCoeur 0.3s 0.05s forwards;
 }
 @keyframes heartFilling {
   0% {
@@ -1692,7 +1692,7 @@ ul {
   transform-origin: 12px 12px;
 }
 .menu .menu_header_title .btn--heart:hover .empty, .menu .menu_header_title .btn--heart:active .empty {
-  animation: disappearanceCoeur 0.8s 0.1s forwards;
+  animation: disappearanceCoeur 0.3s 0.05s forwards;
 }
 @keyframes heartFilling {
   0% {
