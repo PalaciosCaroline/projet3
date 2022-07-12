@@ -285,7 +285,7 @@ ul {
   height: 8%;
   background-color: #000;
   border-radius: 0 0 1.4em 1.4em;
-  z-index: 8;
+  z-index: 19;
   transform-origin: -15% 0;
 }
 .loader_page #cooking #area #table {
@@ -294,14 +294,14 @@ ul {
   right: -25%;
   width: 150%;
   height: 4.5%;
-  z-index: 99;
+  z-index: 21;
   background-color: #99E2D0;
   border-radius: 0.2em 0.2em 0.2em 0.2em;
   transform-origin: -15% 0;
 }
 .loader_page #cooking #area #table2 {
   position: absolute;
-  z-index: 10;
+  z-index: 20;
   bottom: 6%;
   right: -15%;
   width: 130%;
@@ -436,8 +436,8 @@ ul {
   opacity: 0;
 }
 .loader_page #cooking .bubble:nth-child(1) {
-  margin-top: 1.5vh;
-  bottom: 10vh;
+  margin-top: 1vh;
+  bottom: 12vh;
   left: 38%;
   width: 2.5vh;
   height: 2.5vh;
@@ -445,8 +445,8 @@ ul {
   animation: bubble 2s cubic-bezier(0.53, 0.16, 0.39, 0.96) infinite;
 }
 .loader_page #cooking .bubble:nth-child(2) {
-  margin-top: 1.4vh;
-  bottom: 10vh;
+  margin-top: 1vh;
+  bottom: 15vh;
   left: 42%;
   width: 2vh;
   height: 2vh;
@@ -454,8 +454,9 @@ ul {
   animation: bubble 2s ease-in-out 0.35s infinite;
 }
 .loader_page #cooking .bubble:nth-child(3) {
-  margin-top: 1.6vh;
-  bottom: 10%;
+  margin-top: 1vh;
+  z-index: 16;
+  bottom: 12vh;
   left: 40%;
   width: 1.5vh;
   height: 1.5vh;
@@ -463,7 +464,7 @@ ul {
   animation: bubble 1.5s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.55s infinite;
 }
 .loader_page #cooking .bubble:nth-child(4) {
-  margin-top: 1.7vh;
+  margin-top: 1vh;
   left: 39%;
   width: 1.2vh;
   height: 1.2vh;
@@ -471,7 +472,8 @@ ul {
   animation: bubble 1.8s cubic-bezier(0.53, 0.16, 0.39, 0.96) 0.55s infinite;
 }
 .loader_page #cooking .bubble:nth-child(5) {
-  margin-top: 1.9vh;
+  margin-top: 1vh;
+  z-index: 16;
   left: 41%;
   width: 1.1vh;
   height: 1.1vh;
@@ -479,7 +481,7 @@ ul {
   animation: bubble 1.6s ease-in-out 1s infinite;
 }
 .loader_page #cooking .bubble:nth-child(6) {
-  margin-top: 1.9vh;
+  margin-top: 1vh;
   left: 48%;
   width: 0.8vh;
   height: 0.8vh;
@@ -487,7 +489,7 @@ ul {
   animation: bubble 1.7s ease-in-out 1s infinite;
 }
 .loader_page #cooking .bubble:nth-child(7) {
-  margin-top: 1.9vh;
+  margin-top: 1vh;
   left: 45%;
   width: 1.2vh;
   height: 1.2vh;
@@ -495,7 +497,8 @@ ul {
   animation: bubble 1.4s ease-in-out 1s infinite;
 }
 .loader_page #cooking .bubble:nth-child(8) {
-  margin-top: 1.9vh;
+  margin-top: 1vh;
+  z-index: 16;
   left: 45%;
   width: 0.9vh;
   height: 0.9vh;
@@ -503,7 +506,8 @@ ul {
   animation: bubble 1.5s ease-in-out 1s infinite;
 }
 .loader_page #cooking .bubble:nth-child(9) {
-  margin-top: 1.9vh;
+  margin-top: 1vh;
+  z-index: 16;
   left: 36%;
   width: 1.2vh;
   height: 1.2vh;
@@ -516,7 +520,7 @@ ul {
   }
 }
 .loader_page #cooking .bubble:nth-child(10) {
-  margin-top: 1.9vh;
+  margin-top: 1vh;
   left: 32%;
   width: 1.2vh;
   height: 1.2vh;
@@ -529,7 +533,7 @@ ul {
   }
 }
 .loader_page #cooking .bubble:nth-child(11) {
-  margin-top: 1.9vh;
+  margin-top: 1vh;
   left: 36%;
   width: 1.2vh;
   height: 1.2vh;
@@ -542,7 +546,8 @@ ul {
   }
 }
 .loader_page #cooking .bubble:nth-child(12) {
-  margin-top: 1.9vh;
+  margin-top: 1vh;
+  z-index: 16;
   left: 36%;
   width: 1.2vh;
   height: 1.2vh;
@@ -572,10 +577,11 @@ ul {
 }
 .loader_page #cooking .bubble:nth-child(15) {
   margin-top: 1.9vh;
+  z-index: 16;
   left: 29%;
   width: 1.1vh;
   height: 1.1vh;
-  background-color: #FF79DA;
+  background-color: #9356DC;
   animation: bubble 1.2s ease-in-out 1s infinite;
 }
 @media only screen and (min-width: 1300px) {
@@ -588,7 +594,7 @@ ul {
   left: 31%;
   width: 0.9vh;
   height: 0.9vh;
-  background-color: #9356DC;
+  background-color: #FF79DA;
   animation: bubble 0.6s ease-in-out 1s infinite;
 }
 @media only screen and (min-width: 1300px) {
@@ -601,7 +607,7 @@ ul {
   left: 32%;
   width: 0.9vh;
   height: 0.9vh;
-  background-color: #FF79DA;
+  background-color: #9356DC;
   animation: bubble 1s ease-in-out 1s infinite;
 }
 @media only screen and (min-width: 1300px) {
@@ -630,7 +636,7 @@ ul {
   height: 90px;
   margin: auto;
   position: absolute;
-  z-index: 7;
+  z-index: 15;
   top: 52vh;
   left: 5vw;
   bottom: 0;
@@ -1073,9 +1079,9 @@ ul {
   position: absolute;
   bottom: 17%;
   right: -10%;
-  width: 28%;
-  height: 6%;
-  background-color: #B05428;
+  width: 52px;
+  height: 11px;
+  background-color: #660707;
   z-index: 2;
   border-radius: 0 0 1.4em 1.4em;
   transform-origin: -10% 0;
@@ -1088,7 +1094,7 @@ ul {
   -webkit-animation: blink 0.1s infinite;
   animation: blink 0.1s infinite;
   transform: scale(0.2);
-  top: -140px;
+  top: -139px;
   left: 10px;
   z-index: -1;
 }
@@ -1176,7 +1182,7 @@ ul {
   position: absolute;
   top: 1%;
   left: 0;
-  filter: blur(5px);
+  filter: blur(2px);
   border-top-left-radius: 500%;
   border-bottom-left-radius: 50px;
   border-top-right-radius: 500%;
@@ -1233,8 +1239,8 @@ ul {
   box-shadow: inset 0 7px 12px -2px #fbf348, inset 0 9px 57px -3px rgb(255, 168, 24), inset 0 -5px 8px 2px black, 0 0 3px 0px #ff6a00;
 }
 .loader_page .fire__glow {
-  width: 80rem;
-  height: 50rem;
+  width: 70rem;
+  height: 45rem;
   position: absolute;
   left: -15rem;
   top: -27rem;
