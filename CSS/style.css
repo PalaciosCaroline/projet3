@@ -163,6 +163,7 @@ ul {
   text-align: center;
   font-size: 5vh;
   font-weight: 200;
+  z-index: 99;
   color: white;
   opacity: 1;
 }
@@ -172,7 +173,7 @@ ul {
     opacity: 0.98;
   }
   90% {
-    opacity: 0.8;
+    opacity: 0.85;
   }
   100% {
     opacity: 0;
