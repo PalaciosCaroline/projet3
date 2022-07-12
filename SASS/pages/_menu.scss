@@ -2,7 +2,7 @@
 
 .menu_streamer_img {
     overflow: hidden;
-    height: 270px;   
+    height: 270px;
     @include devices (maxi-pc){
         height: 350px;
     }
@@ -11,7 +11,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-    } 
+    }
 }
 
 .menu_box{
@@ -33,7 +33,7 @@
     border-radius: 25px 25px 0 0;
     padding-bottom: 60px;
     @include padding-box;
-    .menu_header_title{   
+    .menu_header_title{
         border-radius: 50px 50px 0 0;
         display: flex;
         padding-top: 30px;
@@ -47,8 +47,8 @@
             padding-top: 40px;
         }
         @include devices (maxi-pc){
-            padding-top:50px; 
-        }   
+            padding-top:50px;
+        }
         h1{
             font-family: $font-family-title;
             font-size: 1.7em;
@@ -56,17 +56,17 @@
             font-weight: 500;
             display: block;
             @include devices (maxi-pc){
-               font-size: 2.5rem;  
-            }   
+               font-size: 2.5rem;
+            }
         }
 
-        .btn--heart{    
+        .btn--heart{
             @include  btn--heart;
-            margin:auto 8px;         
+            margin:auto 8px;
             background-color: $color-background-header--menu;
         }
     }
-   
+
     .dish_type {
         position: relative;
         font-size: 1rem;
@@ -84,11 +84,8 @@
             display: block;
             background-color: $color-tertiary;
         }
-        .menu_list .dish_type:nth-child(1){
-            animation: slidePage 0.1s 0.2 backwards;
-        } 
-    } 
-        
+    }
+
     &_list{
         display: flex;
         flex-direction: column;
@@ -109,68 +106,69 @@
             overflow: hidden;
             box-shadow :0 1px 6px 0 rgba(100, 99, 99, 0.3);
         }
-        & .menu_list_item{                
-            @include devices (maxi-pc){
-                height: 90px;           
-            }
+        & .menu_list_item{ 
             animation: slidePage 1s backwards;
             @for $i from 1 through 15 {
                 &:nth-child(#{$i}){
-                    animation-delay: (0.15s * $i) + 0.15s ;
+                    animation: slidePage 0.15s backwards;
+                    animation-delay: (0.2s * $i) + 0.15s ;
                 }
+            }
+            @include devices (maxi-pc){
+                height: 90px;
             }
         }
         & .item_text{
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            padding-left:10px;  
-            padding-right: 15px;            
+            padding-left:10px;
+            padding-right: 15px;
             width: calc(100% - 45px);
             box-sizing: border-box;
             h3{
-                font-size: 1.1em;                
-                margin:0 0 7px 0;                    
+                font-size: 1.1em;
+                margin:0 0 7px 0;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 font-weight: 400;
-            } 
+            }
             p.text{
                 font-size: 0.9em;
                 font-weight: 300;
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                margin:0;  
+                margin:0;
                 margin-right: 15px;
-            }                               
+            }
         }
-        .price_check{                    
+        .price_check{
             width: 105px;
-            margin-right: -60px;                              
+            margin-right: -60px;
             justify-content: space-between;
-            flex-shrink: 0; 
-            height: 100%;     
+            flex-shrink: 0;
+            height: 100%;
             @include devices(small-pc){
                 width: 125px;
-                margin-right: -80px;  
+                margin-right: -80px;
             }
             @include devices(pc){
                 width: 105px;
-                margin-right: -60px;  
-            }         
+                margin-right: -60px;
+            }
             span.price{
-                font-weight: 400;                    
+                font-weight: 400;
                 width: 45px;
                 display: block;
                 align-self: center;
             }
             .menu_list_item_check{
-                flex-grow: 2;   
+                flex-grow: 2;
                 background-color: $color-tertiary;
-                border-radius: 0 15px 15px 0;                    
-                width: 60px;               
+                border-radius: 0 15px 15px 0;
+                width: 60px;
                 @include devices(small-pc){
                     width: 80px;
                 }
@@ -180,11 +178,11 @@
                 i {
                     color: #ffffff;
                     font-size: 1.2em;
-                }    
+                }
             }
-        }    
+        }
     }
-}   
+}
 
 .menu_list_item:hover .item_text,
 .menu_list_item:active .item_text{
@@ -196,60 +194,56 @@
         width: calc(90% - 120px);
     }
 }
-    
+
 .menu_list_item:hover .price_check,
 .menu_list_item:active .price_check {
     animation: slidingShutter 0.3s ease-in-out both;
     @include devices(small-pc){
         animation: slidingShutterSmallPc 0.3s ease-in-out both;
-   }    
+   }
     @include devices(pc){
         animation: slidingShutter 0.3s ease-in-out both;
-   }    
+   }
 }
 
-.menu_list_item:hover i,          
-.menu_list_item:active i{          
+.menu_list_item:hover i,
+.menu_list_item:active i{
     animation: iconRotate 0.3s  0.15s linear both;
-}           
-       
+}
+
 @keyframes slidePage {
     0%{
         opacity: 0;
-        margin-top: 35px;
     }
     50%{
-        opacity: 0.7;
-        margin-top: 10px;
-    }
+        opacity: 0.2;
+    } 
     100%{
         opacity: 1;
-        margin-top: 0px;
     }
 }
 
-
 @keyframes iconRotate{
-    0%{transform: rotate(180deg);}  
+    0%{transform: rotate(180deg);}
     100%{transform: rotate(360deg) ; }
 }
-
 
 @keyframes slidingShutter {
     0% { margin-right: -60px;
     }
-    100% {        
+    100% {
         margin-right: 0;
     }
 }
+
 @keyframes slidingShutterSmallPc {
     0% { margin-right: -80px;
     }
-    100% {        
+    100% {
         margin-right: 0;
     }
 }
-    
+
 .order{
     @include btn--pill;
     padding: 16px 50px;
