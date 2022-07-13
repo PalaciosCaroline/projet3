@@ -53,7 +53,7 @@ Travail sur les animations et la navigation au sein d'un site web.
 
 * Dans le footer, surlignage dynamique des liens de navigation.
 
-	pages de menu:
+	Sur les pages de menu:
 	
 * Plats arrivant sur la page progressivement,
 	
@@ -68,7 +68,7 @@ Travail sur les animations et la navigation au sein d'un site web.
 
 * Les cartes des restaurants renvoient chacune vers leur page de menu.
 
-	Page menu :
+	Pages menu :
   
 * dans le header, lien en icône flèche qui renvoie vers l’accueil.
 
