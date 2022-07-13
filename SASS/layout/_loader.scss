@@ -46,7 +46,7 @@
     @for $i from 1 to 9 {
       &:nth-child(#{$i}){
         animation: smokeLetter 1.4s both;
-          animation-delay: (0.15s * $i) + 0.5s ;
+        animation-delay: (0.15s * $i) + 0.5s ;
         }
       }
   }
