@@ -55,9 +55,9 @@ Travail sur les animations et la navigation au sein d'un site web.
 
 	pages de menu:
 	
-* Plats arrivant sur la page progressivement pour les pages de menu.
+* Plats arrivant sur la page progressivement,
 	
-* Volet coulissant vert avec encoche au survol ou lors de la sélection d’un plat, si l’intitulé du plat est trop long, il devra être rogné avec des points de suspension
+* Volet coulissant vert avec encoche au survol ou lors de la sélection d’un plat, si l’intitulé du plat est trop long, il est rogné avec des points de suspension.
 
 
 <h3>Mise en place d'une navigation :</h3>
