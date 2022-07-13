@@ -1196,7 +1196,7 @@ ul {
   border-bottom-right-radius: 50px;
   transform: skewY(-10deg);
   box-shadow: 0 0px 0px 3px white, 0 -10px 1px 4px white, 0 -17px 2px 3px gold, 0 -20px 5px 4px #ff6a00, 0 0px 75px 10px #ff6a00, 0 -10px 2px 4px white, 0 -5px 3px 3px white;
-  -webkit-animation: flame-up 0.7s infinite;
+  -webkit-animation: flame-up 0.2s infinite;
   animation: flame-up 0.2s infinite;
   background: linear-gradient(0deg, rgba(0, 0, 255, 0.7427345938) 4%, rgba(255, 184, 0, 0.9080007003) 14%, rgb(255, 255, 255) 38%);
 }
