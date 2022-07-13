@@ -3,7 +3,7 @@
 
 <h2 align="center">Projet dans le cadre de la formation développeur d'application JavaScript React</h2> 
 
-<p align="center">Site web mis en ligne, rendez-vous sur</p> [ohmyfood](https://palacioscaroline.github.io/)
+Site web mis en ligne, rendez-vous sur [ohmyfood](https://palacioscaroline.github.io/)
 
 -----------------------------------------------------------------
 
