@@ -150,6 +150,7 @@ ul {
   background-color: #333;
   opacity: 0.99;
   overflow: hidden;
+  animation: loaderAnimation 1.5s forwards;
   animation-delay: 2s;
   background-size: 400% 400%;
 }
