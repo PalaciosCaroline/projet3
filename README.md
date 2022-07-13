@@ -45,11 +45,19 @@ Travail sur les animations et la navigation au sein d'un site web.
 
 * Loader de chargement du site
 
-* Volet coulissant vert avec encoche au survol ou lors de la sélection d’un plat, si l’intitulé du plat est trop long, il devra être rogné avec des points de suspension sur les pages de menu,
+	Sur toutes les pages :
 
-* Bouton “j’aime” en forme de cœur qui se remplit progressivement présent sur toutes les pages,
+* Bouton “j’aime” en forme de cœur qui se remplit progressivement au survol ou clic,
 
+* Bouton pilule avec travail de dégradé des couleurs et changement de couleur et d'ombrage au survol ou au clic,
+
+* Dans le footer, surlignage dynamique des liens de navigation.
+
+	pages de menu:
+	
 * Plats arrivant sur la page progressivement pour les pages de menu.
+	
+* Volet coulissant vert avec encoche au survol ou lors de la sélection d’un plat, si l’intitulé du plat est trop long, il devra être rogné avec des points de suspension
 
 
 <h3>Mise en place d'une navigation :</h3>
