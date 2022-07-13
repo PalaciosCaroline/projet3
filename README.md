@@ -18,9 +18,12 @@ Utilisation de SASS, aucune bibliothèque n'a été utilisée, les animations so
 
 <img src="https://github.com/PalaciosCaroline/projet3/blob/main/images/image_du_projet.jpg?raw=true" width="50%" height="50%" />
 
-Simulation de la création d'un site de réservation et de commande en ligne de repas (seul les fichiers html et css au travers de sass ont été réalisés)
+Création d'un site de commande de repas en ligne (seul les fichiers html et css au travers de sass ont été réalisés). 
 
-Animations crées :
+Travail sur les animations et la navigation au sein du site.
+
+
+<h2>Animations crées :</h2>
 
 * Loader de chargement du site
 
@@ -31,7 +34,7 @@ Animations crées :
 * Plats arrivant sur la page progressivement pour les pages de menu.
 
 
-Mise en place d'une navigation :
+<h2>Mise en place d'une navigation :</h2>
 
 * Lien contact du footer qui renvoie à une adresse mail.
 
