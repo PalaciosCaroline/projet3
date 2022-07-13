@@ -6,7 +6,6 @@ font-weight: 700;
 padding-left: 40px;
 padding-right: 40px;
 }
-
 .h2--home{
 font-size: 1.4rem;
 font-weight: 700;
@@ -16,7 +15,6 @@ padding-bottom: 20px;
         padding-bottom:30px;
     }
 }
-
 .form_location {
     @include marge-page ;
     background-color: $color-background-header--ligth;
@@ -39,7 +37,6 @@ padding-bottom: 20px;
         }
     }
 }
-
 .main_header{
     @include marge-page ;
     background: $color-background-header--ultraligth;
@@ -53,7 +50,6 @@ padding-bottom: 20px;
         }
     }
 }
-
 .features{
     @include marge-page ;
     position: relative;    
@@ -104,13 +100,11 @@ padding-bottom: 20px;
         }
     }    
 }   
- 
 .section_restaurant{
     background-color: $color-background-header--ultraligth;
     padding-bottom: 40px;
     @include marge-page;
 }
-
 .restaurant{
     flex-direction: column;
     @include devices(small-pc) {

@@ -10,8 +10,7 @@
   overflow: hidden;
   animation: loaderAnimation 1.5s forwards;
   animation-delay: 2s;    
-  background-size: 400% 400%;
-    
+  background-size: 400% 400%;  
   .loader_logo {
     position: relative;
     font-family: 'Shrikhand';
@@ -24,8 +23,7 @@
     z-index:99;
     color: #ffff;
     opacity: 1;   
-  }
-     
+  }   
   //curtain-raiser
   @keyframes loaderAnimation {
     0%{
@@ -41,7 +39,6 @@
         top:-100%;    
     }
   }
-
   // animation smoke letter
   .loader_logo span {
     display: inline-block;
@@ -51,7 +48,6 @@
   .loader_logo span:nth-child(1n+0){
     animation-name: smokeLetter-mirror,smokeLetter;
   }
-  
   @keyframes smokeLetter {
     0% {
       transform: rotate(0deg) translateY(0px);
@@ -64,7 +60,6 @@
       color: white;
     }
   }
-  
   @keyframes smokeLetter-mirror {
     60% {
       text-shadow: 0 0 40px #ffff; }
@@ -78,11 +73,9 @@
       opacity: 0;
     }
   }
-  
   @for $i from 1 to 8 {
   span:nth-child(#{$i}) { animation-delay: 1.2 + $i * 0.15s; }
   }
-
   //animation poele
   #cooking {
     position: relative;
@@ -100,7 +93,6 @@
       margin: 0 0;
     }
   }
-
   #cooking #area {
     position: absolute;
     bottom: 6.7%;
@@ -110,14 +102,12 @@
     background-color: transparent;
     transform-origin: 15% 40%;
   }
-  
   #cooking #area #sides {
     position: absolute;
     width: 100%;
     height: 100%;
     transform-origin: 15% 40%;
   }
-  
   #cooking #area #sides #handle {
     position: absolute;
     bottom: 18%;
@@ -130,7 +120,6 @@
     border-radius: 100%;
     transform: rotate(20deg) rotateX(0deg) scale(1.3, 0.9);
   }
-  
   #cooking #area #sides #pan {
     position: absolute;
     bottom: 19.1%;
@@ -142,7 +131,6 @@
     z-index:19;
     transform-origin: -15% 0;     
   }
- 
   #cooking #area #table {
     position: absolute;
     bottom: 14.5%;
@@ -154,7 +142,6 @@
     border-radius: 0.2em 0.2em 0.2em 0.2em;
     transform-origin: -15% 0;   
   }
-
   #cooking #area #table2 {
     position: absolute;
     z-index: 20;
@@ -172,7 +159,6 @@
       bottom: 7.2%;
     } 
   }
-
   //loader de la table
   .wrapperLoader {
     position: relative; 
@@ -183,7 +169,6 @@
     height: 70px;
     transform:scale(0.2);
   }
-
   #dot1, #dot2, #dot3, #dot4, #dot5, #dot6, #dot7, #dot8, #dot9, #dot10 {
     position: absolute;
     z-index:50;
@@ -194,51 +179,41 @@
     animation: spin 1.5s linear infinite;
     transform-origin: center center;
   }
-
   #dot2 {
     animation: spin 1.5s -0.75s linear infinite;
   }
-
   #dot3 {
     left: 30px;
     animation: spin 1.5s -1.3s linear infinite;
   }
-
   #dot4 {
     left: 30px;
     animation: spin 1.5s -0.55s linear infinite;
   }
-
   #dot5 {
     left: 60px;
     animation: spin 1.5s -1.1s linear infinite;
   }
-
   #dot6 {
     left: 60px;
     animation: spin 1.5s -0.35s linear infinite;
   }
-
   #dot7 {
     left: 90px;
     animation: spin 1.5s -0.9s linear infinite;
   }
-
   #dot8 {
     left: 90px;
     animation: spin 1.5s -0.15s linear infinite;
   }
-
   #dot9 {
     left: 120px;
     animation: spin 1.5s -0.7s linear infinite;
   }
-
   #dot10 {
     left: 120px;
     animation: spin 1.5s 0.05s linear infinite;
   }
-
   #base1, #base2, #base3, #base4, #base5 {
     position: absolute;
     z-index:50;
@@ -250,27 +225,22 @@
     animation: flex 1.5s linear infinite;
     transform-origin: center center;
   }
-
   #base2 {
     left: 35px;
     animation: flex 1.5s -1.3s linear infinite;
   }
-
   #base3 {
     left: 65px;
     animation: flex 1.5s -1.1s linear infinite;
   }
-
   #base4 {
     left: 95px;
     animation: flex 1.5s -0.9s linear infinite;
   }
-
   #base5 {
     left: 125px;
     animation: flex 1.5s -0.7s linear infinite;
   }
-
   @keyframes spin {
     0%, 100% {
       transform: translateY(0px) scale(1);
@@ -285,7 +255,6 @@
       transform: translateY(30px) scale(0.3);
     }
   }
-
   @keyframes flex {
     0%, 100% {
       transform: scaleY(5);
@@ -301,7 +270,6 @@
     }
   }
   //fin du loader de la table 
-
   #cooking .bubble {
     position: absolute;
     border-radius: 100%;
@@ -473,8 +441,7 @@
     @include devices (pc){
       left: 40%;
     }
-  }
-  
+  }  
   @keyframes bubble {
     0% {
       transform: scale(0.15, 0.15);
@@ -491,7 +458,6 @@
       opacity: 0;
     }
   }
-
   //smoke pan
   #blunt_container{
     width:50px;height:90px;
@@ -512,7 +478,6 @@
     50% { -webkit-transform: translateY(-20px); transform: translateY(-20px); }
     100% { -webkit-transform: translateY(0); transform: translateY(0); }
   }
-
   @-webkit-keyframes smoke1 {
     0% {
       -webkit-transform: scale(0.2);
@@ -670,7 +635,6 @@
     margin-left:-30px;
     position: absolute;
   }
-
   .smoke {
     position: absolute;
     bottom: 0;
@@ -923,7 +887,6 @@
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
   }
-
   //candle et bougeoir
   #cooking #area #bougeoir {
     position: absolute;
@@ -936,7 +899,6 @@
     border-radius: 0 0 1.4em 1.4em;
     transform-origin: -10% 0;   
   }
-
   .candle {
     position: absolute;
     width: 38px;
@@ -949,7 +911,6 @@
     left:10px;
     z-index: -1;
   }
-
   @-webkit-keyframes blink {
     50% {
       opacity: 0.95;
@@ -959,8 +920,7 @@
     50% {
       opacity: 0.95;
     }
-  }
-      
+  }   
   .wick {
     position: absolute;
     width: 6px;
@@ -971,7 +931,6 @@
     border-radius: 10%;
     filter:blur(2px);
   }
-
   .wick:before {
     content: "";
     position: absolute;
@@ -982,7 +941,6 @@
       0 -3px 10px 8px rgba(255, 106, 0, 0.7);
     filter:blur(5px);
   }
-
   .wick:after {
     content: "";
     position: absolute;
@@ -993,8 +951,7 @@
     box-shadow: 0 5px 2px 3px gold, 0 20px 2px 14px gold,
       0 -6px 4px 5px rgba(98, 33, 27, 0.8), 0 0px 1px 4px rgba(255, 106, 0, 0.7),
       0 0px 3px 4px #ff6a00, 0 5px 3px 4px gold;
-  }
-      
+  }  
   .flame {
     width: 20px;
     height: 150px;
@@ -1005,7 +962,6 @@
     animation: move 3s infinite, move-left 3s infinite;
     transform-origin: 50% 90%;       
   }
-
   @keyframes moveFlame {
     0% {transform: translateX(-50%) rotate(1deg);}
     10% {transform: translateX(-50%) rotate(0deg);}
@@ -1014,7 +970,6 @@
     80% {transform: translateX(-50%) rotate(-11deg) scale(1.2);}
     100% {transform: translateX(-50%) rotate(0deg);}
   }
-
   @-webkit-keyframes move-left {
     50% {
       transform: skewX(3deg);
@@ -1025,7 +980,6 @@
       transform: skewX(3deg);
     }
   }
-
   .flame .top {
     width: 20px;
     height: 100%;
@@ -1050,7 +1004,6 @@
       rgba(255, 255, 255, 1) 38%
     );
   }
-
   @-webkit-keyframes flame-up {
     50% {
       box-shadow: 0 0px 0px 3px white, 0 -38px 1px 2px white, 0 -41px 2px 3px gold,
@@ -1065,7 +1018,6 @@
         0 -5px 3px 3px white;
     }
   }
-
   .flame .shadows {
     position: absolute;
     left: 50%;
@@ -1077,7 +1029,6 @@
       0 15px 50px 15px #ff6a00, 5px 30px 5px 13px #ff6a00,
       5px 50px 5px 13px #ff6a00, 0 75px 50px 30px black;
   }
-
   .flame .bottom {
     transform: scale(0.4);
     position: absolute;
@@ -1090,8 +1041,7 @@
       0 -12px 10px 8px rgba(255, 106, 0, 0.5), 0 -15px 10px 10px gold,
       5px -25px 10px 5px gold, 0 2px 5px 10px #30537d, 0 -2px 2px 14px #76daff,
       0 2px 10px 12px #76daff;
-  }
-      
+  }    
   .wax {
     position: relative;
     top: 30px;
@@ -1123,7 +1073,6 @@
     inset 0 9px 57px -3px  rgba(255, 168, 24, 1), inset 0 -5px 8px 2px black,
     0 0 3px 0px #ff6a00;
   }
-
   //halo of light
   .fire__glow {
     width: 70rem;
@@ -1142,7 +1091,6 @@
     filter: blur(10rem);
     animation: glowBlink 5s infinite;
   }
-
   @keyframes glowBlink {
     70% {
       opacity: 0.9;
