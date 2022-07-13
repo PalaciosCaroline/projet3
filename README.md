@@ -1,6 +1,8 @@
-=Dynamisez une page web avec des animations CSS
+***<h1>Dynamisez une page web avec des animations CSS</h1>***
+*************************************************************
 
--Projet dans le cadre de la formation développeur d'application JavaScript React : 
+
+<h2>Projet dans le cadre de la formation développeur d'application JavaScript React : </h2>
 
 
 Mettre en place une structure de navigation pour un site web
