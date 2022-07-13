@@ -1,13 +1,13 @@
 
-***<h1>Dynamisez une page web avec des animations CSS</h1>***
+***<h1 align="center">Dynamisez une page web avec des animations CSS</h1>***
 
-<h2>Projet dans le cadre de la formation développeur d'application JavaScript React</h2> 
+<h2 align="center">Projet dans le cadre de la formation développeur d'application JavaScript React</h2> 
 
 Site web mis en ligne, rendez-vous sur [ohmyfood](https://palacioscaroline.github.io/)
 
 -----------------------------------------------------------------
 
-<h2>Objet du projet :</h2>
+<h2 align="center">Objet du projet :</h2>
 
 Le projet a pour but la création du site Ohmyfood! Paris sous la supervision de Paul, CTO, d’après les maquettes mobiles aux couleurs de Paris réalisée par Fanny, UX Designer. 
 
@@ -18,7 +18,7 @@ Ohmyfood! est une entreprise de réservation et de commande de repas en ligne.
 Son outil en mobile first permet aux classes moyennes et supérieures souhaitant déguster des produits de qualité de composer leur propre menu gastronomique et ainsi de réduire leur temps d’attente dans les restaurants.
 
 
-<h2>Réalisations attendues :</h2>	
+<h2 align="center">Réalisations attendues :</h2>	
 	
 * Mettre en place une structure de navigation pour le site
 	
@@ -27,7 +27,7 @@ Son outil en mobile first permet aux classes moyennes et supérieures souhaitant
 * Mettre en œuvre des effets CSS graphiques avancés.
 	
 	
-<h2>Contraintes techniques :</h2>
+<h2 align="center">Contraintes techniques :</h2>
 	
 Utilisation de SASS, aucune bibliothèque ne doit être utilisée, les animations doivent être réalisées en css.
 
