@@ -3,7 +3,7 @@
 
 <h2 align="center">Projet dans le cadre de la formation développeur d'application JavaScript React</h2> 
 
-Site web mis en ligne, rendez-vous sur [ohmyfood](https://palacioscaroline.github.io/)
+<p align="center">Site web mis en ligne, rendez-vous sur [ohmyfood](https://palacioscaroline.github.io/)</p>
 
 -----------------------------------------------------------------
 
@@ -43,7 +43,7 @@ Utilisation de SASS, aucune bibliothèque ne doit être utilisée, les animation
 
 ***********************************************************************************************************************************************************************
 
-<h2>Contenu du repository</h2>
+<h2 align="center">Contenu du repository</h2>
 
 Seul les fichiers html et css (avec l'utilisation de sass) ont été réalisés. 
 
