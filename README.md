@@ -14,18 +14,19 @@ Ohmyfood! est une entreprise de réservation et de commande de repas en ligne. S
 
 <h2>Réalisations attendues :</h2>	
 	
-* Mettre en place d'une structure de navigation pour le site
+* Mettre en place une structure de navigation pour le site
 	
 * Assurer la Cohérence graphique
 	
-* Mettre en œuvre des effets CSS graphiques avancés
+* Mettre en œuvre des effets CSS graphiques avancés.
 	
 	
-<h3>Contraintes techniques :</h3>
+<h2>Contraintes techniques :</h2>
 	
-Utilisation de SASS, aucune bibliothèque n'est utilisée, les animations sont en css.
+Utilisation de SASS, aucune bibliothèque ne doit être utilisée, les animations doivent être réalisées en css.
 
 ***********************************************************************************************************************************************************************
+
 
 Exemple: Animation du loader
 
@@ -33,12 +34,14 @@ Exemple: Animation du loader
 <img src="https://github.com/PalaciosCaroline/projet3/blob/main/images/image_loader.png?raw=true" width="65%" height="65%" />
 </p>
 
+
 ***********************************************************************************************************************************************************************
+
 <h2>Contenu du repository</h2>
 
-Seul les fichiers html et css au travers de sass ont été réalisés. 
+Seul les fichiers html et css (avec l'utilisation de sass) ont été réalisés. 
 
-Travail sur les animations et la navigation au sein d'un site web.
+Travail consistant en la création d'animations et de navigation au sein d'un site web dans le respect de la cohérence graphique.
 
 
 <h3>Animations crées :</h3>
