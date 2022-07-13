@@ -1,5 +1,5 @@
 ```diff
-@@***<h1>Dynamisez une page web avec des animations CSS</h1>***@@
+***<h1>Dynamisez une page web avec des animations CSS</h1>***
 ```
 
 <h2>Projet dans le cadre de la formation développeur d'application JavaScript React : </h2>
@@ -10,8 +10,8 @@
 <h2>Objet du projet :</h2>
 	
 	
-<p>Le projet a pour but la création du site Ohmyfood! Paris sous la supervision de Paul, CTO, d’après les maquettes mobiles aux couleurs de Paris réalisée par Fanny, UX Designer. La start-up Ohmyfood! souhaite implanter sur Paris son concept déjà présent à New York.
-Ohmyfood! est une entreprise de réservation et de commande de repas en ligne. Son outil en mobile first permet aux classes moyennes et supérieures souhaitant déguster des produits de qualité de composer leur propre menu gastronomique et ainsi de réduire leur temps d’attente dans les restaurants.</p>
+@@Le projet a pour but la création du site Ohmyfood! Paris sous la supervision de Paul, CTO, d’après les maquettes mobiles aux couleurs de Paris réalisée par Fanny, UX Designer. La start-up Ohmyfood! souhaite implanter sur Paris son concept déjà présent à New York.
+Ohmyfood! est une entreprise de réservation et de commande de repas en ligne. Son outil en mobile first permet aux classes moyennes et supérieures souhaitant déguster des produits de qualité de composer leur propre menu gastronomique et ainsi de réduire leur temps d’attente dans les restaurants.@@
 
 
 <h2>Réalisations attendues :</h2>	
