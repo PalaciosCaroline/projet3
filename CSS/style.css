@@ -150,7 +150,6 @@ ul {
   background-color: #333;
   opacity: 0.99;
   overflow: hidden;
-  animation: loaderAnimation 1.5s forwards;
   animation-delay: 2s;
   background-size: 400% 400%;
 }
@@ -1184,12 +1183,11 @@ ul {
   }
 }
 .loader_page .flame .top {
-  width: 20px;
+  width: 15px;
   height: 100%;
   position: absolute;
   top: 1%;
   left: 0;
-  filter: blur(2px);
   border-top-left-radius: 500%;
   border-bottom-left-radius: 50px;
   border-top-right-radius: 500%;
