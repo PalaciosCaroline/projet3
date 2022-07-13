@@ -20,6 +20,9 @@ Loader réalisé :
 <img src="https://github.com/PalaciosCaroline/projet3/blob/main/images/image_du_projet.jpg?raw=true" width="50%" height="50%" />
 </p>
 
+********************************************************************************************************************************
+<h2>Contenu du repository</h2>
+
 Création d'un site de commande de repas en ligne (seul les fichiers html et css au travers de sass ont été réalisés). 
 
 Travail sur les animations et la navigation au sein du site.
