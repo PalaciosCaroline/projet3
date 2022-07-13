@@ -14,11 +14,11 @@ Ohmyfood! est une entreprise de réservation et de commande de repas en ligne. S
 
 <h2>Réalisations attendues :</h2>	
 	
-* Mise en place d'une structure de navigation pour le site
+* Mettre en place d'une structure de navigation pour le site
 	
-* Assurance de la Cohérence graphique
+* Assurer la Cohérence graphique
 	
-* Mise en œuvre des effets CSS graphiques avancés
+* Mettre en œuvre des effets CSS graphiques avancés
 	
 	
 <h3>Contraintes techniques :</h3>
