@@ -1,10 +1,10 @@
 
-***<h1>Dynamisez une page web avec des animations CSS</h1>***
+***#titreDynamisez une page web avec des animations CSS***
 
-<h2>Projet dans le cadre de la formation développeur d'application JavaScript React : </h2>
+##titreProjet dans le cadre de la formation développeur d'application JavaScript React 
 
 
-***********************************************************************************************************************************************************************
+-----------------------------------------------------------------
 
 <h2>Objet du projet :</h2>
 	
