@@ -958,22 +958,22 @@
   }
   @-webkit-keyframes move-left {
     50% {
-      transform: skewX(2deg);
+      transform: skewX(3deg);
     }
   }
   @keyframes move-left {
     50% {
-      transform: skewX(2deg);
+      transform: skewX(3deg);
     }
   }
   @-webkit-keyframes move-right {
     50% {
-      transform: skewX(-2deg);
+      transform: skewX(-3deg);
     }
   }
   @keyframes move-right {
     50% {
-      transform: skewX(-2deg);
+      transform: skewX(-3deg);
     }
   }
   .flame .top {
@@ -991,8 +991,8 @@
     box-shadow: 0 0px 0px 3px white, 0 -20px 1px 4px white, 0 -25px 2px 3px gold,
       0 -30px 5px 4px #ff6a00, 0 0px 150px 10px #ff6a00, 0 -10px 2px 4px white,
       0 -5px 3px 3px white;
-    -webkit-animation: flame-up 4s infinite;
-    animation: flame-up 4s infinite;
+    -webkit-animation: flame-up 0.7s infinite;
+    animation: flame-up 0.7s infinite;
     background: linear-gradient(
       0deg,
       rgba(0, 0, 255, 0.742734593837535) 4%,
@@ -1085,7 +1085,7 @@
     );
     transform: scale(2);
     filter: blur(10rem);
-    animation: glowBlink 5s infinite;
+    animation: glowBlink 2s infinite;
   }
   @keyframes glowBlink {
     70% {
