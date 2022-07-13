@@ -3,7 +3,7 @@
 <h2>Projet dans le cadre de la formation développeur d'application JavaScript React : </h2>
 
 
-*******************************************************************************************
+***********************************************************************************************************************************************************************
 
 Mettre en place une structure de navigation pour un site web
 
@@ -20,15 +20,15 @@ Loader réalisé :
 <img src="https://github.com/PalaciosCaroline/projet3/blob/main/images/image_du_projet.jpg?raw=true" width="50%" height="50%" />
 </p>
 
-********************************************************************************************************************************
+***********************************************************************************************************************************************************************
 <h2>Contenu du repository</h2>
 
 Création d'un site de commande de repas en ligne (seul les fichiers html et css au travers de sass ont été réalisés). 
 
-Travail sur les animations et la navigation au sein du site.
+Travail sur les animations et la navigation au sein d'un site web.
 
 
-<h2>Animations crées :</h2>
+<h3>Animations crées :</h3>
 
 * Loader de chargement du site
 
@@ -39,7 +39,7 @@ Travail sur les animations et la navigation au sein du site.
 * Plats arrivant sur la page progressivement pour les pages de menu.
 
 
-<h2>Mise en place d'une navigation :</h2>
+<h3>Mise en place d'une navigation :</h3>
 
 * Lien contact du footer qui renvoie à une adresse mail.
 
@@ -50,6 +50,9 @@ Page accueil :
 	Page menu :
   
 * dans le header, lien en icône flèche qui renvoie vers l’accueil.
+
+
+***********************************************************************************************************************************************************************
 
 
 
