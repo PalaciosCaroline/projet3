@@ -1,7 +1,5 @@
 
-```diff
-<h1>@@***Dynamisez une page web avec des animations CSS@@</h1>***
-```
+<h1>***Dynamisez une page web avec des animations CSS***</h1>
 
 
 <h2>Projet dans le cadre de la formation développeur d'application JavaScript React : </h2>
