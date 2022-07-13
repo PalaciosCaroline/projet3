@@ -15,8 +15,10 @@ Mettre en œuvre des effets CSS graphiques avancés
 
 Utilisation de SASS, aucune bibliothèque n'a été utilisée, les animations sont en css.
 
-
+Loader réalisé :
+<p align="center">
 <img src="https://github.com/PalaciosCaroline/projet3/blob/main/images/image_du_projet.jpg?raw=true" width="50%" height="50%" />
+</p>
 
 Création d'un site de commande de repas en ligne (seul les fichiers html et css au travers de sass ont été réalisés). 
 
