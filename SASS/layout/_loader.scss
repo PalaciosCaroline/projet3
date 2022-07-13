@@ -46,7 +46,7 @@
     @for $i from 1 to 9 {
       &:nth-child(#{$i}){
         animation: smokeLetter 1.4s both;
-        animation-delay: (0.15s * $i) + 0.5s ;
+        animation-delay: (0.12s * $i) + 0.5s ;
         }
       }
   }
@@ -944,26 +944,36 @@
     top:-120px;
     left:50%;
     position: absolute;
-    -webkit-animation: moveFlame 3s infinite, move-left 3s infinite;
-    animation: move 3s infinite, move-left 3s infinite;
+    -webkit-animation: moveFlame 1s infinite, move-left 1s infinite;
+    animation: moveFlame 1.5s infinite, move-left 0.5s 1s infinite, move-right 0.5s 0.5s infinite;
     transform-origin: 50% 90%;       
   }
   @keyframes moveFlame {
-    0% {transform: translateX(-50%) rotate(1deg);}
-    10% {transform: translateX(-50%) rotate(0deg);}
-    30% {transform: translateX(-50%) rotate(5deg) scale(1.1);}
-    70% {transform: translateX(-50%) rotate(0deg);}
-    80% {transform: translateX(-50%) rotate(-11deg) scale(1.2);}
-    100% {transform: translateX(-50%) rotate(0deg);}
+    0% {transform: translateX(-25%) rotate(1deg) scale(0.9);}
+    10% {transform: translateX(-25%) rotate(0deg) scale(0.9);}
+    30% {transform: translateX(-25%) rotate(5deg) scale(1);}
+    70% {transform: translateX(-25%) rotate(0deg) scale(0.9);}
+    80% {transform: translateX(-25%) rotate(-8deg) scale(1.1);}
+    100% {transform: translateX(-25%) rotate(0deg) scale(0.9);}
   }
   @-webkit-keyframes move-left {
     50% {
-      transform: skewX(3deg);
+      transform: skewX(2deg);
     }
   }
   @keyframes move-left {
     50% {
-      transform: skewX(3deg);
+      transform: skewX(2deg);
+    }
+  }
+  @-webkit-keyframes move-right {
+    50% {
+      transform: skewX(-2deg);
+    }
+  }
+  @keyframes move-right {
+    50% {
+      transform: skewX(-2deg);
     }
   }
   .flame .top {
