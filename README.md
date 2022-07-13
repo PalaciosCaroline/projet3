@@ -19,7 +19,7 @@ Utilisation de SASS, aucune bibliothèque n'a été utilisée, les animations so
 Loader réalisé :
 
 <p align="center">
-<img src="https://github.com/PalaciosCaroline/projet3/blob/main/images/image_loader.png?raw=true" width="50%" height="50%" />
+<img src="https://github.com/PalaciosCaroline/projet3/blob/main/images/image_loader.png?raw=true" width="75%" height="75%" />
 </p>
 
 ***********************************************************************************************************************************************************************
