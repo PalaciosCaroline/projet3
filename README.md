@@ -9,15 +9,15 @@
 
 <h2>Objet du projet :</h2>
 	
-```diff	
-@@Le projet a pour but la création du site Ohmyfood! Paris sous la supervision de Paul, CTO, d’après les maquettes mobiles aux couleurs de Paris réalisée par Fanny, UX Designer. 
+
+Le projet a pour but la création du site Ohmyfood! Paris sous la supervision de Paul, CTO, d’après les maquettes mobiles aux couleurs de Paris réalisée par Fanny, UX Designer. 
 
 La start-up Ohmyfood! souhaite implanter sur Paris son concept déjà présent à New York.
 
 Ohmyfood! est une entreprise de réservation et de commande de repas en ligne. 
 
-Son outil en mobile first permet aux classes moyennes et supérieures souhaitant déguster des produits de qualité de composer leur propre menu gastronomique et ainsi de réduire leur temps d’attente dans les restaurants.@@
-```
+Son outil en mobile first permet aux classes moyennes et supérieures souhaitant déguster des produits de qualité de composer leur propre menu gastronomique et ainsi de réduire leur temps d’attente dans les restaurants.
+
 
 
 <h2>Réalisations attendues :</h2>	
@@ -35,9 +35,9 @@ Utilisation de SASS, aucune bibliothèque ne doit être utilisée, les animation
 
 ***********************************************************************************************************************************************************************
 
-
-Exemple: Animation du loader
-
+```diff	
+@@Exemple: Animation du loader@@
+```
 <p align="center">
 <img src="https://github.com/PalaciosCaroline/projet3/blob/main/images/image_loader.png?raw=true" width="65%" height="65%" />
 </p>
