@@ -46,7 +46,7 @@ Travail sur les animations et la navigation au sein d'un site web.
 
 * Lien contact du footer qui renvoie à une adresse mail.
 
-Page accueil :
+	Page accueil :
 
 * Les cartes des restaurants renvoient chacune vers leur page de menu.
 
