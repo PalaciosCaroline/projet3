@@ -8,7 +8,7 @@
   background-color: #333;
   opacity: 0.99;
   overflow: hidden;
-  animation: loaderAnimation 1.5s forwards;
+  //animation: loaderAnimation 1.5s forwards;
   animation-delay: 2s;    
   background-size: 400% 400%;  
   .loader_logo {
@@ -949,12 +949,12 @@
     transform-origin: 50% 90%;       
   }
   @keyframes moveFlame {
-    0% {transform: translateX(-25%) rotate(1deg) scale(0.9);}
-    10% {transform: translateX(-25%) rotate(0deg) scale(0.9);}
-    30% {transform: translateX(-25%) rotate(5deg) scale(1);}
-    70% {transform: translateX(-25%) rotate(0deg) scale(0.9);}
-    80% {transform: translateX(-25%) rotate(-8deg) scale(1.1);}
-    100% {transform: translateX(-25%) rotate(0deg) scale(0.9);}
+    0% {transform: translateX(-40%) rotate(1deg) scale(0.9);}
+    10% {transform: translateX(-40%) rotate(0deg) scale(0.9);}
+    30% {transform: translateX(-40%) rotate(5deg) scale(1);}
+    70% {transform: translateX(-40%) rotate(0deg) scale(0.9);}
+    80% {transform: translateX(-40%) rotate(-8deg) scale(1.1);}
+    100% {transform: translateX(-40%) rotate(0deg) scale(0.9);}
   }
   @-webkit-keyframes move-left {
     50% {
