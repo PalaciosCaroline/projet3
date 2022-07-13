@@ -5,15 +5,24 @@
 
 ***********************************************************************************************************************************************************************
 
-<h3>Objet du projet :<h3>
+<h2>Objet du projet :<h2>
+	
+	
+Le projet a pour but la création du site Ohmyfood! Paris sous la supervision de Paul, CTO, d’après les maquettes mobiles aux couleurs de Paris réalisée par Fanny, UX Designer. La start-up Ohmyfood! souhaite implanter sur Paris son concept déjà présent à New York.
+Ohmyfood! est une entreprise de réservation et de commande de repas en ligne. Son outil en mobile first permet aux classes moyennes et supérieures souhaitant déguster des produits de qualité de composer leur propre menu gastronomique et ainsi de réduire leur temps d’attente dans les restaurants.
 
+
+<h2>Objet d'attention :</h2>
+	
+	
 Mettre en place une structure de navigation pour un site web
 
 Assurer la cohérence graphique d'un site web
 
 Mettre en œuvre des effets CSS graphiques avancés
 
-
+	
+Contrainte technique :
 Utilisation de SASS, aucune bibliothèque n'a été utilisée, les animations sont en css.
 
 ***********************************************************************************************************************************************************************
@@ -27,7 +36,7 @@ Exemple: Animation du loader
 ***********************************************************************************************************************************************************************
 <h2>Contenu du repository</h2>
 
-Création d'un site de commande de repas en ligne (seul les fichiers html et css au travers de sass ont été réalisés). 
+Seul les fichiers html et css au travers de sass ont été réalisés. 
 
 Travail sur les animations et la navigation au sein d'un site web.
 
