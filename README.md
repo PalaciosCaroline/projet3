@@ -12,18 +12,13 @@ Le projet a pour but la création du site Ohmyfood! Paris sous la supervision de
 Ohmyfood! est une entreprise de réservation et de commande de repas en ligne. Son outil en mobile first permet aux classes moyennes et supérieures souhaitant déguster des produits de qualité de composer leur propre menu gastronomique et ainsi de réduire leur temps d’attente dans les restaurants.
 
 
-<h2>Objet d'attention :</h2>
+<h2>Réalisations attendues :</h2>		
+Mise en place d'une structure de navigation pour le site
+Cohérence graphique
+Mise en œuvre des effets CSS graphiques avancés
 	
-	
-Mettre en place une structure de navigation pour un site web
-
-Assurer la cohérence graphique d'un site web
-
-Mettre en œuvre des effets CSS graphiques avancés
-
-	
-Contrainte technique :
-Utilisation de SASS, aucune bibliothèque n'a été utilisée, les animations sont en css.
+Contraintes techniques :
+Utilisation de SASS, aucune bibliothèque n'est utilisée, les animations sont en css.
 
 ***********************************************************************************************************************************************************************
 
