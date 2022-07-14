@@ -3,7 +3,7 @@
 
 <h2 align="center">Projet dans le cadre de la formation développeur d'application JavaScript React</h2> 
 
-Pour voir le résultat du site web mis en ligne, rendez-vous sur [ohmyfood](https://palacioscaroline.github.io/)
+Pour voir le résultat du site web mis en ligne, rendez-vous sur [ohmyfood](https://PalaciosCaroline.github.io/)
 
 -----------------------------------------------------------------
 
