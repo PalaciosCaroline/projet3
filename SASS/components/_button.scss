@@ -20,7 +20,6 @@
         border-radius: 50px;
     }  
 }
-
 @mixin btn--heart{
     border:none;
     position: relative;
@@ -79,18 +78,3 @@
     }
 }
 
-//en cas de remise des icons
-    //  i{
-    //      font-size: 25px;
-    //      margin-right: 2rem;             
-    //      &::before{display:initial}   //pour pouvoir mettre un dégradé de couleur
-    //      pour coloration d'icon
-            //  background-color: $bg-btn;
-            //  background: -moz-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            //  background: -webkit-linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            //  background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            //  -webkit-background-clip: text;
-            //  -moz-background-clip: text;
-            //  background-clip: text;
-            //  -webkit-text-fill-color: transparent;                  
-    //  }
