@@ -30,7 +30,6 @@
     }
   }
 }
-
 @mixin tag-new{
   content: "Nouveau";
   position: absolute;
@@ -42,18 +41,15 @@
   padding: 5px 15px;  
   border-radius: 3px;  
 }
-
 @mixin cardHover {
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
     transition: all 0.2s ease-in-out;    
 }
-
 @mixin marge-page{
     padding-right: 5.5%;
     padding-left: 5.5%;
 }
-
 @mixin padding-box{
   padding-right: 3%;
   padding-left: 3%;
